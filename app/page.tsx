@@ -1,10 +1,20 @@
 import { Hero } from "./compoenents/sections/Hero"
+import { AboutHBOT } from "./compoenents/sections/AboutHBOT"
+import { Benefits } from "./compoenents/sections/Benefits"
+import { Trust } from "./compoenents/sections/Trust"
+import { FAQ } from "./compoenents/sections/FAQ"
+import { Process } from "./compoenents/sections/Process"
+
 
 export default function Page() {
   return (
     <>
-    <Hero/>
-
+      <Hero />
+      <AboutHBOT />
+      <Benefits />
+      <Process />
+      <Trust />
+      <FAQ />
     </>
   )
 }
