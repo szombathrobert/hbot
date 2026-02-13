@@ -24,12 +24,12 @@ export const FunctionalPage = () => {
                         stroke="none"
                     />
 
-                    <h1 className="text-5xl md:text-6xl lg:text-7xl leading-[1.08] mb-8 text-white text-left md:pl-26">
+                    <h1 className="text-5xl md:text-6xl lg:text-7xl leading-[1.08] mb-8 text-white text-left md:pl-28">
                         Működési
                         <span className="text-white font-bold block md:inline"> alapelvek</span>
                     </h1>
 
-                    <div className="w-full md:pl-32">
+                    <div className="w-full md:pl-30">
                         <p className="text-white text-justify text-lg md:text-lg leading-relaxed mb-6">
                             A hiperbár oxigénterápia egy korszerű orvosi eljárás, amely során a páciens tiszta oxigént lélegzik be egy speciális, megnövelt nyomású kamrában. Normál körülmények között az oxigént főleg a vörösvérsejtek szállítják. A hiperbár környezetben viszont a megnövelt nyomás miatt sokkal több oxigén oldódik fel a vérplazmában, így az oxigén mélyebben és hatékonyabban jut el a szövetekhez ez segíti a gyógyulást és a regenerációt, csökkenti a gyulladást, és támogatja a sérült vagy oxigénhiányos területek helyreállítását.
                         </p>
