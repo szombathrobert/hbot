@@ -32,6 +32,7 @@ export const Navbar = () => {
     { name: 'Áraink', href: '#araink' },
     { name: 'Kezelésről', href: '#kezelesrol' },
     { name: 'Gyakori Kérdések', href: '#gyik' },
+    { name: 'Rólunk', href: '#rolunk' },
     { name: 'Kapcsolat', href: '#kapcsolat' },
   ]
 
