@@ -94,7 +94,7 @@ export const Benefits = () => {
                                 <Maximize className="w-6 h-6 text-brand-primary" />
                             </div>
                             <div>
-                                <h3 className="text-xl font-bold text-brand-dark mb-2">Klausztrofóbia-mentes</h3>
+                                <h3 className="text-xl font-bold text-brand-dark mb-2">Klausztrofóbia-barát</h3>
                                 <p className="text-brand-muted">Az egyik legtágasabb kabin a piacon nagy ablakokkal.</p>
                             </div>
                         </motion.div>
