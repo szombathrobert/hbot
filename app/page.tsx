@@ -1,5 +1,6 @@
 import { Hero } from "./compoenents/sections/Hero"
 import { OxygenTherapy } from "./compoenents/sections/OxygenTherapy"
+import { FunctionalPage } from "./compoenents/sections/FunctionalPage"
 import { AboutHBOT } from "./compoenents/sections/AboutHBOT"
 import { Benefits } from "./compoenents/sections/Benefits"
 import { Trust } from "./compoenents/sections/Trust"
@@ -13,6 +14,7 @@ export default function Page() {
     <>
       <Hero />
       <OxygenTherapy />
+      <FunctionalPage />
       <AboutHBOT />
       <Benefits />
       <Process />
