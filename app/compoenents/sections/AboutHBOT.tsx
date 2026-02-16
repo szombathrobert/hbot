@@ -30,19 +30,6 @@ const benefits = [
   }
 ]
 
-const parameters = {
-  times: [
-    { val: "30 perc", label: "Energy Boost", desc: "Gyors felfrissülés, mentális fókusz javítása." },
-    { val: "60 perc", label: "Terápiás szint", desc: "Az ajánlott orvosi protokoll a mélyebb regenerációért." }
-  ],
-  pressures: [
-    { val: "1.2 ATA", label: "Soft", desc: "Kezdő szint, relaxáció." },
-    { val: "1.3 ATA", label: "Mild", desc: "Keringésjavítás." },
-    { val: "1.4 ATA", label: "Medium", desc: "Sportregeneráció." },
-    { val: "1.5 ATA", label: "Therapy", desc: "Maximális hatás." }
-  ]
-}
-
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
@@ -89,7 +76,7 @@ export const AboutHBOT = () => {
         >
           <motion.div variants={itemVariants} className="lg:col-span-12 bg-white rounded-3xl p-8 border border-brand-light/20 shadow-sm hover:shadow-lg transition-shadow duration-300">
             <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
-              <div className="w-16 h-16 rounded-2xl bg-brand-primary/10 flex items-center justify-center flex-shrink-0">
+              <div className="w-16 h-16 rounded-2xl bg-brand-primary/10 flex items-center justify-center shrink-0">
                 <Gauge className="w-8 h-8 text-brand-primary" />
               </div>
               <div>
@@ -116,48 +103,13 @@ export const AboutHBOT = () => {
               <ul className="space-y-2 mt-auto pt-4 border-t border-gray-50">
                 {item.details.map((detail, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm text-brand-dark font-medium">
-                    <Check className="w-4 h-4 text-brand-primary mt-0.5 flex-shrink-0" />
+                    <Check className="w-4 h-4 text-brand-primary mt-0.5 shrink-0" />
                     {detail}
                   </li>
                 ))}
               </ul>
             </motion.div>
           ))}
-
-          <motion.div variants={itemVariants} className="lg:col-span-6 bg-brand-dark text-slate-900 rounded-3xl p-8 relative overflow-hidden group">
-            <div className="flex items-center gap-3 mb-8 relative z-10">
-              <Clock className="w-6 h-6 text-slate-900" />
-              <h3 className="text-xl font-bold">Választható kezelési idők</h3>
-            </div>
-            <div className="space-y-6 relative z-10">
-              {parameters.times.map((t, i) => (
-                <div key={i} className="flex items-start gap-4 pb-4 border-b border-white/10 last:border-0 last:pb-0">
-                  <div className="bg-white/10 px-3 py-1 rounded-lg font-bold text-slate-900 whitespace-nowrap">
-                    {t.val}
-                  </div>
-                  <div>
-                    <p className="font-bold text-slate-900">{t.label}</p>
-                    <p className="text-sm text-slate-900">{t.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-
-          <motion.div variants={itemVariants} className="lg:col-span-6 bg-white rounded-3xl p-8 border border-brand-light/20 shadow-sm hover:shadow-lg transition-shadow duration-300">
-            <div className="flex items-center gap-3 mb-8">
-              <Gauge className="w-6 h-6 text-brand-primary" />
-              <h3 className="text-xl font-bold text-brand-dark">Orvosi nyomásfokozatok</h3>
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              {parameters.pressures.map((p, i) => (
-                <div key={i} className="bg-brand-bg p-4 rounded-2xl hover:bg-brand-light/10 transition-colors">
-                  <p className="text-2xl font-bold text-brand-primary mb-1">{p.val}</p>
-                  <p className="text-xs font-bold text-brand-dark uppercase tracking-wider mb-2">{p.label}</p>
-                </div>
-              ))}
-            </div>
-          </motion.div>
         </motion.div>
       </div>
     </section>
