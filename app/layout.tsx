@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="hu" className="scroll-smooth">
-      <body className={`${inter.variable} font-sans bg-brand-bg text-brand-dark antialiased`}>
+      <body className={`${inter.variable} font-sans bg-brand-bg text-brand-dark antialiased w-full min-h-screen bg-[url('/background.webp')] bg-cover bg-[48%_center] md:bg-center bg-no-repeat overflow-hidden`}>
         <JsonLd />
         <Navbar />
         {children}

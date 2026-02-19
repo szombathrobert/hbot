@@ -24,7 +24,13 @@ const steps = [
 
 const containerVariants: Variants = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.2 } }
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.2,
+            delayChildren: 0.3
+        }
+    }
 }
 
 const itemVariants: Variants = {
@@ -34,14 +40,17 @@ const itemVariants: Variants = {
 
 export const Process = () => {
     return (
-        <section id="folyamat" className="py-24 relative w-full min-h-screen bg-[url('/background.webp')] bg-cover bg-[48%_center] md:bg-center bg-no-repeat overflow-hidden flex items-center justify-center">
-
-            <div className="absolute inset-0 bg-[#020617]/70"></div>
+        <section id="folyamat" className="relative w-full py-24 overflow-hidden flex items-center justify-center">
 
             <div className="container mx-auto px-4 md:px-6 relative z-10">
 
-                <div className="text-center max-w-4xl mx-auto mb-24 flex flex-col items-center">
-
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                    className="text-center max-w-4xl mx-auto mb-24 flex flex-col items-center"
+                >
                     <Quote className="self-start w-16 h-16 md:w-20 md:h-20 text-white/30 mb-6 fill-current transform rotate-180" />
 
                     <h2 className="text-4xl md:text-5xl lg:text-6xl text-white mb-2 tracking-wider uppercase font-light">
@@ -51,7 +60,7 @@ export const Process = () => {
                     <span className="block w-full md:w-auto text-center md:text-left text-sm md:text-base font-medium text-[#8FBCE6] uppercase tracking-widest mt-8 md:transform md:translate-x-12">
                         Lépésről lépésre az endolife longevity egészségklinikán
                     </span>
-                </div>
+                </motion.div>
 
                 <motion.div
                     variants={containerVariants}
@@ -79,7 +88,7 @@ export const Process = () => {
                                     <h3 className="text-2xl font-bold text-white mb-6 leading-tight pr-8 mt-4">
                                         {step.title}
                                     </h3>
-                                    <p className="text-gray-200 text-base leading-relaxed font-light drop-shadow-md">
+                                    <p className="text-white text-base leading-relaxed font-light drop-shadow-md">
                                         {step.desc}
                                     </p>
                                 </div>

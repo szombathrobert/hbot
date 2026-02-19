@@ -30,10 +30,9 @@ const cardVariants: Variants = {
 
 export const TherapyTime = () => {
     return (
-        <section className="py-24 relative w-full min-h-screen bg-[url('/background.webp')] bg-cover bg-[48%_center] md:bg-center bg-no-repeat overflow-hidden flex items-center justify-center">
+        <section className="relative w-full py-24 overflow-hidden flex items-center justify-center">
 
-            {/* Sötétítő réteg */}
-            <div className="absolute inset-0 bg-[#020617]/80"></div>
+            <div className="absolute inset-0"></div>
 
             <div className="container mx-auto px-4 md:px-6 relative z-10">
 
@@ -46,10 +45,8 @@ export const TherapyTime = () => {
                         viewport={{ once: true }}
                         className="relative mt-20 lg:mt-0 w-full lg:max-w-lg mx-auto"
                     >
-                        {/* Ring */}
                         <div className="absolute -top-16 -left-10 md:-top-20 md:-left-20 w-32 h-32 md:w-40 md:h-40 rounded-full border-[30px] md:border-[40px] border-white/80 -z-10 animate-pulse duration-[8000ms]"></div>
 
-                        {/* Maga a Kártya */}
                         <div className={`
                             relative 
                             bg-gradient-to-br from-[#0f172a]/80 to-[#0f172a]/40 backdrop-blur-xl
@@ -60,7 +57,7 @@ export const TherapyTime = () => {
                             border-b-[6px] border-b-cyan-200/40 
                             border-r-[1px] border-r-cyan-200/30
                         `}>
-                            <p className="text-gray-200 text-lg md:text-xl leading-relaxed font-light text-justify drop-shadow-md">
+                            <p className="text-white text-lg md:text-xl leading-relaxed font-light text-justify drop-shadow-md">
                                 A hiperbár oxigénterápia során a kezelési idő hossza szintén meghatározó tényező a kívánt hatás elérésében. Az egyes alkalmak időtartama befolyásolja, hogy mennyi oxigén jut be a szervezetbe, és milyen mértékben tud az hasznosulni a sejtek szintjén. A megfelelően beállított időtartam elősegíti a regenerációs folyamatokat és a szervezet egyensúlyának támogatását. Emellett a kezelések rendszeressége és a teljes kúra hossza is kulcsfontosságú, hiszen a hiperbár terápia hatása gyakran kumulatív, vagyis több alkalom során épül fel a leginkább érezhető eredmény.
                             </p>
                         </div>
@@ -89,7 +86,6 @@ export const TherapyTime = () => {
                             {treatmentTime.map((item, index) => (
                                 <motion.div key={index} variants={itemVariants} className="flex items-center gap-6 group">
 
-                                    {/* Ring */}
                                     <div className="w-16 h-16 rounded-full border-[15px] border-white/60 flex-shrink-0 animate-pulse duration-[8000ms]" />
 
                                     <div>

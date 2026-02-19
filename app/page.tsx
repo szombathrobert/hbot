@@ -13,43 +13,42 @@ import { Contact } from "./compoenents/sections/Contact"
 
 const SectionDivider = () => {
   return (
-    <div className="w-full h-8 md:h-14 bg-[#000027]" />
+    <div className="w-full h-12 md:h-24 bg-transparent" />
   )
 }
 
-
 export default function Page() {
   return (
-    <>
-      <Hero />
+    <main className="relative min-h-screen">
+      <div className="fixed inset-0 z-0 bg-[url('/background.webp')] bg-cover bg-[48%_center] md:bg-center bg-no-repeat"></div>
 
-      <OxygenTherapy />
+      <div className="fixed inset-0 z-0 bg-[#020617]/80"></div>
 
-      <FunctionalPage />
-
-      <AboutHBOT />
-
-      <Process />
-
-      <SectionDivider />
-
-      <DoctorPressure />
-
-      <SectionDivider />
-
-      <TherapyTime />
-
-      <Benefits />
-
-      <PricePage />
-
-      <SectionDivider />
-
-      <FAQ />
-
-      <Trust />
-
-      <Contact />
-    </>
+      <div className="relative z-10 flex flex-col">
+        <Hero />
+        <SectionDivider />
+        <OxygenTherapy />
+        <SectionDivider />
+        <FunctionalPage />
+        <SectionDivider />
+        <AboutHBOT />
+        <SectionDivider />
+        <Process />
+        <SectionDivider />
+        <DoctorPressure />
+        <SectionDivider />
+        <TherapyTime />
+        <SectionDivider />
+        <Benefits />
+        <SectionDivider />
+        <PricePage />
+        <SectionDivider />
+        <FAQ />
+        <SectionDivider />
+        <Trust />
+        <SectionDivider />
+        <Contact />
+      </div>
+    </main>
   )
 }

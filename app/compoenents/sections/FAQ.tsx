@@ -41,9 +41,7 @@ export const FAQ = () => {
     }
 
     return (
-        <section id="gyik" className="py-24 relative w-full min-h-screen bg-[url('/background.webp')] bg-cover bg-[48%_center] md:bg-center bg-no-repeat overflow-hidden flex items-center justify-center">
-
-            <div className="absolute inset-0 bg-[#020617]/80"></div>
+        <section id="gyik" className="relative w-full py-24 overflow-hidden flex items-center justify-center">
 
             <div className="container mx-auto px-4 md:px-6 relative z-10">
 
@@ -112,7 +110,7 @@ export const FAQ = () => {
                                             transition={{ duration: 0.3, ease: "easeInOut" }}
                                             className="overflow-hidden px-6"
                                         >
-                                            <div className="bg-[#0f172a]/40 backdrop-blur-sm rounded-3xl p-6 border-2 border-[#8FBCE6] text-gray-200 text-base md:text-lg leading-relaxed shadow-inner">
+                                            <div className="bg-[#0f172a]/40 backdrop-blur-sm rounded-3xl p-6 border-2 border-[#8FBCE6] text-white text-base md:text-lg leading-relaxed shadow-inner">
                                                 {item.answer}
                                             </div>
                                         </motion.div>

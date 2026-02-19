@@ -36,15 +36,14 @@ const itemVariants: Variants = {
 
 export const Contact = () => {
     return (
-        <section id="kapcsolat" className="py-24 relative w-full min-h-screen bg-[url('/background.webp')] bg-cover bg-[48%_center] md:bg-center bg-no-repeat overflow-hidden flex items-center justify-center">
+        <section id="kapcsolat" className="relative w-full py-24 overflow-hidden flex items-center justify-center">
 
-            <div className="absolute inset-0 bg-[#020617]/80"></div>
+            <div className="absolute inset-0"></div>
 
             <div className="container mx-auto px-4 md:px-6 relative z-10">
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
 
-                    {/* --- BAL OSZLOP: Cím, Szöveg és TÉRKÉP --- */}
                     <div className="flex flex-col h-full">
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
