@@ -3,14 +3,16 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "./compoenents/layout/Navbar";
 import { Footer } from "./compoenents/layout/Footer";
+import { JsonLd } from "./compoenents/JsonLd";
 
 // Az Inter betűtípus betöltése (latin karakterkészlettel)
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "Oxigénterápia.hu - Orvosi Hiperbárikus Központ",
-  description: "Magyarország vezető hiperbárikus oxigénterápiás központja. Orvosi tisztaságú oxigén a gyógyulásért és regenerációért.",
-};
+  title: 'Hiperbár Oxigénterápia Székesfehérvár | Endo-Kapszula Klinika',
+  description: 'Prémium hiperbár oxigénterápia (HBOT) Székesfehérváron. Orvosi felügyelet, modern kapszulák, poszt-COVID és regenerációs kezelések. Foglaljon időpontot!',
+  keywords: ['hiperbár oxigénterápia', 'HBOT Székesfehérvár', 'oxigénterápia', 'long covid kezelés', 'sport regeneráció'],
+}
 
 export default function RootLayout({
   children,
@@ -20,9 +22,10 @@ export default function RootLayout({
   return (
     <html lang="hu" className="scroll-smooth">
       <body className={`${inter.variable} font-sans bg-brand-bg text-brand-dark antialiased`}>
-        <Navbar/>
+        <JsonLd />
+        <Navbar />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

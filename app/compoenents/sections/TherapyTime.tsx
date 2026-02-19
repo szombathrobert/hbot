@@ -60,7 +60,6 @@ export const TherapyTime = () => {
                             border-b-[6px] border-b-cyan-200/40 
                             border-r-[1px] border-r-cyan-200/30
                         `}>
-                            {/* Szöveg tartalom */}
                             <p className="text-gray-200 text-lg md:text-xl leading-relaxed font-light text-justify drop-shadow-md">
                                 A hiperbár oxigénterápia során a kezelési idő hossza szintén meghatározó tényező a kívánt hatás elérésében. Az egyes alkalmak időtartama befolyásolja, hogy mennyi oxigén jut be a szervezetbe, és milyen mértékben tud az hasznosulni a sejtek szintjén. A megfelelően beállított időtartam elősegíti a regenerációs folyamatokat és a szervezet egyensúlyának támogatását. Emellett a kezelések rendszeressége és a teljes kúra hossza is kulcsfontosságú, hiszen a hiperbár terápia hatása gyakran kumulatív, vagyis több alkalom során épül fel a leginkább érezhető eredmény.
                             </p>

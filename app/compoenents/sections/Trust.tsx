@@ -27,15 +27,19 @@ const reviews = [
 export const Trust = () => {
     return (
         <section className="py-24">
-            <div className="container mx-auto px-4 md:px-6">
+            {/* VÉLEMÉNYEK */}
+            <div className="text-center max-w-4xl mx-auto mb-24 flex flex-col items-center">
+                <Quote className="self-start w-16 h-16 md:w-20 md:h-20 text-white/30 mb-6 fill-current transform rotate-180" />
 
-                {/* VÉLEMÉNYEK */}
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-brand-dark mb-4">
-                        Akik már <span className="text-brand-primary">fellélegeztek</span>
-                    </h2>
-                    <p className="text-brand-muted">Valós pácienseink tapasztalatai</p>
-                </div>
+                <h2 className="text-4xl md:text-5xl lg:text-6xl text-white mb-2 tracking-wider uppercase font-light">
+                    Akik már <span className='font-bold uppercase'>fellélegeztek</span>
+                </h2>
+
+                <span className="block w-full md:w-auto text-center md:text-left text-sm md:text-base font-medium text-slate-900 uppercase tracking-widest mt-8 md:transform md:translate-x-12">
+                    endolife longevity egészségklinika pácienseinek tapasztalata
+                </span>
+            </div>
+            <div className="container mx-auto px-4 md:px-6 bg-white">
 
                 <div className="grid md:grid-cols-3 gap-8 mb-20">
                     {reviews.map((review, i) => (

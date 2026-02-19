@@ -2,128 +2,127 @@ export const JsonLd = () => {
     const structuredData = {
         "@context": "https://schema.org",
         "@graph": [
-            // 1. HERO & ABOUT & TRUST - A Klinika és az Entitás
+            // 1. A KLINIKA (MedicalClinic) - A valós székesfehérvári adatokkal
             {
                 "@type": "MedicalClinic",
-                "@id": "https://oxigenterapia.hu/#clinic",
-                "name": "Oxigénterápia.hu - Orvosi Hiperbárikus Centrum",
-                "url": "https://oxigenterapia.hu",
-                "logo": "https://oxigenterapia.hu/logo.png",
-                "image": "https://oxigenterapia.hu/hero-image.jpg",
-                "description": "Magyarország vezető hiperbárikus oxigénterápiás központja. Orvosi tisztaságú oxigén, 1.5 ATA nyomás, keményfalú kamra.",
+                "@id": "https://endo-kapszula.hu/#clinic",
+                "name": "Endo-Kapszula Magánorvosi Centrum",
+                "url": "https://endo-kapszula.hu", // Ha ez a végleges domain, ha nem, írd át!
+                "logo": "https://endo-kapszula.hu/logo.png", // Ellenőrizd, hogy van-e ilyen fájl
+                "image": "https://endo-kapszula.hu/hero.webp", // A Hero képed
+                "description": "Székesfehérvár prémium hiperbárikus oxigénterápiás központja. Orvosi felügyelet, 1.5 ATA nyomás, poszt-COVID és regenerációs kezelések.",
                 "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": "Példa utca 5.",
-                    "addressLocality": "Budapest",
-                    "postalCode": "1024",
+                    "streetAddress": "Budai út 318.",
+                    "addressLocality": "Székesfehérvár",
+                    "postalCode": "8000",
                     "addressCountry": "HU"
                 },
+                // FONTOS: Ezeket a koordinátákat a Google Mapsről néztem a Budai út 318-hoz:
                 "geo": {
                     "@type": "GeoCoordinates",
-                    "latitude": "47.5135",
-                    "longitude": "19.0142"
+                    "latitude": "47.1932",
+                    "longitude": "18.4357"
                 },
-                "telephone": "+36 1 234 5678",
-                "priceRange": "$$",
-                // TRUST.TSX adataiból (AggregateRating)
-                "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "5.0",
-                    "reviewCount": "500",
-                    "bestRating": "5"
-                },
-                // BENEFITS.TSX kulcsszavai (Specialties)
+                "telephone": "+3622999640",
+                "email": "recepcio@endo-kapszula.hu",
+                "priceRange": "45000 Ft - 120000 Ft",
+                "openingHoursSpecification": [
+                    {
+                        "@type": "OpeningHoursSpecification",
+                        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                        "opens": "08:00",
+                        "closes": "20:00"
+                    }
+                ],
                 "medicalSpecialty": [
                     {
                         "@type": "MedicalSpecialty",
-                        "name": "Post-COVID Rehabilitáció",
-                        "alternateName": "Long-COVID Treatment"
+                        "name": "Hiperbárikus Medicina",
+                        "alternateName": "Hyperbaric Oxygen Therapy"
+                    },
+                    {
+                        "@type": "MedicalSpecialty",
+                        "name": "Rehabilitáció",
+                        "alternateName": "Post-COVID Rehabilitation"
                     },
                     {
                         "@type": "MedicalSpecialty",
                         "name": "Sportorvoslás",
-                        "alternateName": "Sports Injury Recovery"
-                    },
-                    {
-                        "@type": "MedicalSpecialty",
-                        "name": "Anti-aging Medicina",
-                        "alternateName": "Sejtregeneráció"
+                        "alternateName": "Sports Recovery"
                     }
                 ]
             },
 
-            // 2. ABOUT HBOT - A konkrét szolgáltatás (Tudományos háttér)
+            // 2. A SZOLGÁLTATÁS (TherapeuticProcedure)
             {
                 "@type": "TherapeuticProcedure",
-                "@id": "https://oxigenterapia.hu/#procedure",
+                "@id": "https://endo-kapszula.hu/#procedure",
                 "name": "Hiperbárikus Oxigénterápia (HBOT)",
-                "provider": { "@id": "https://oxigenterapia.hu/#clinic" },
-                "description": "Túlnyomásos oxigénterápia, amely a Henry-törvény alapján fizikailag oldja az oxigént a vérplazmában. Segíti a neovaszkularizációt és az őssejt-aktivációt.",
+                "provider": { "@id": "https://endo-kapszula.hu/#clinic" },
+                "description": "Orvosi tisztaságú oxigén belégzése emelt nyomáson (max 1.5 ATA). Segíti a sejtszintű regenerációt, gyulladáscsökkentést és a sebgyógyulást.",
                 "bodyLocation": "Whole body",
                 "procedureType": "Noninvasive",
                 "status": "Active",
-                // A BENEFITS.TSX technikai adatai ide kerülnek
-                "mechanismOfAction": "Hyperbaric Oxygenation (Henry's Law)",
                 "instrument": {
                     "@type": "MedicalDevice",
-                    "name": "Hard Shell Hyperbaric Chamber (Keményfalú Kamra)",
-                    "description": "Klinikai szintű, 1.5 ATA nyomásra képes, légkondicionált kapszula."
+                    "name": "Hard Shell Hyperbaric Chamber",
+                    "description": "Merevfalú, professzionális, légkondicionált kapszula."
                 }
             },
 
-            // 3. PROCESS - A Kezelés Menete (HowTo Schema)
+            // 3. A FOLYAMAT (HowTo) - Ez alapján tudja az AI "lépésről lépésre" ajánlani
             {
                 "@type": "HowTo",
-                "@id": "https://oxigenterapia.hu/#process",
-                "name": "Hogyan zajlik a hiperbárikus oxigénterápia?",
-                "description": "A kezelés menete lépésről lépésre a hbot.hu rendelőjében.",
+                "@id": "https://endo-kapszula.hu/#process",
+                "name": "Hogyan zajlik egy HBOT kezelés az Endo-Kapszulánál?",
                 "step": [
                     {
                         "@type": "HowToStep",
                         "position": 1,
                         "name": "Érkezés és Konzultáció",
-                        "text": "Állapotfelmérés, kontraindikációk kizárása és a nyomás beállítása."
+                        "text": "Orvosi állapotfelmérés és kontraindikációk kizárása."
                     },
                     {
                         "@type": "HowToStep",
                         "position": 2,
-                        "name": "Elhelyezkedés",
-                        "text": "Beszállás a tágas kabinba. Telefon, könyv bevihető."
+                        "name": "Elhelyezkedés a kamrában",
+                        "text": "Beszállás a tágas kabinba kényelmes ruházatban."
                     },
                     {
                         "@type": "HowToStep",
                         "position": 3,
-                        "name": "A Merülés (Nyomásnövelés)",
-                        "text": "Fokozatos nyomásnövelés 1.3 - 1.5 ATA szintre. Füldugulás nyeléssel kompenzálható."
+                        "name": "Nyomásnövelés (Merülés)",
+                        "text": "A nyomás fokozatos emelése a terápiás szintre (pl. 1.3 - 1.5 ATA)."
                     },
                     {
                         "@type": "HowToStep",
                         "position": 4,
-                        "name": "Oxigénfürdő",
-                        "text": "30-60 perces tiszta oxigén belégzés maszkon keresztül."
+                        "name": "Oxigénterápia",
+                        "text": "Tiszta oxigén belégzése maszkon keresztül 30-60 percig."
                     }
                 ]
             },
 
-            // 4. FAQ - Gyakori Kérdések
+            // 4. GYIK (FAQPage) - Ez segít bekerülni a Google "Emberek kérdezték még" dobozába
             {
                 "@type": "FAQPage",
-                "@id": "https://oxigenterapia.hu/#faq",
+                "@id": "https://endo-kapszula.hu/#faq",
                 "mainEntity": [
                     {
                         "@type": "Question",
-                        "name": "Fájdalmas a kezelés?",
-                        "acceptedAnswer": { "@type": "Answer", "text": "Nem, teljesen fájdalommentes. Csak enyhe füldugulás érezhető az elején." }
+                        "name": "Fájdalmas a hiperbárikus oxigénterápia?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Nem, a kezelés teljesen fájdalommentes. A nyomásváltozáskor enyhe füldugulás érezhető, ami nyeléssel könnyen kiegyenlíthető." }
                     },
                     {
                         "@type": "Question",
                         "name": "Hány alkalom szükséges?",
-                        "acceptedAnswer": { "@type": "Answer", "text": "Frissítésre 1-3 alkalom, regenerációhoz 5-10 alkalom javasolt." }
+                        "acceptedAnswer": { "@type": "Answer", "text": "Általános regenerációhoz 5-10 alkalom, krónikus problémák esetén hosszabb kúra javasolt az orvosi konzultáció alapján." }
                     },
                     {
                         "@type": "Question",
-                        "name": "Klausztrofóbiások használhatják?",
-                        "acceptedAnswer": { "@type": "Answer", "text": "Igen, a kabin tágas, átlátható és folyamatos a kapcsolat a kezelővel." }
+                        "name": "Mennyibe kerül a kezelés?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Egy 5 alkalmas bérlet 45.000 Ft, a 10 alkalmas 85.000 Ft. Az árak tartalmazzák az orvosi konzultációt is." }
                     }
                 ]
             }

@@ -8,6 +8,8 @@ import { FAQ } from "./compoenents/sections/FAQ"
 import { Process } from "./compoenents/sections/Process"
 import { DoctorPressure } from "./compoenents/sections/DoctorPressure"
 import { TherapyTime } from "./compoenents/sections/TherapyTime"
+import { PricePage } from "./compoenents/sections/pricePage"
+import { Contact } from "./compoenents/sections/Contact"
 
 const SectionDivider = () => {
   return (
@@ -21,15 +23,11 @@ export default function Page() {
     <>
       <Hero />
 
-
       <OxygenTherapy />
-
 
       <FunctionalPage />
 
-
       <AboutHBOT />
-
 
       <Process />
 
@@ -43,11 +41,15 @@ export default function Page() {
 
       <Benefits />
 
+      <PricePage />
+
+      <SectionDivider />
+
+      <FAQ />
 
       <Trust />
 
-
-      <FAQ />
+      <Contact />
     </>
   )
 }
