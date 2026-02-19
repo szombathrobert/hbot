@@ -7,6 +7,7 @@ import { Quote } from 'lucide-react'
 export const FunctionalPage = () => {
     return (
         <section
+            id='indikaciok'
             aria-label="Főújdonságok és időpontfoglalás"
             className="relative w-full py-24 overflow-hidden flex items-center justify-center"
         >
