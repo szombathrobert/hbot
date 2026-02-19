@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "./compoenents/layout/Navbar";
 import { Footer } from "./compoenents/layout/Footer";
 import { JsonLd } from "./compoenents/JsonLd";
+import { SmoothScroll } from "./compoenents/SmoothScroll";
 
 // Az Inter betűtípus betöltése (latin karakterkészlettel)
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -24,7 +25,9 @@ export default function RootLayout({
       <body className={`${inter.variable} font-sans bg-brand-bg text-brand-dark antialiased w-full min-h-screen bg-[url('/background.webp')] bg-cover bg-[48%_center] md:bg-center bg-no-repeat overflow-hidden`}>
         <JsonLd />
         <Navbar />
-        {children}
+        <SmoothScroll>
+          {children}
+        </SmoothScroll>
         <Footer />
       </body>
     </html>
