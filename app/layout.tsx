@@ -24,7 +24,7 @@ export default function RootLayout({
       <head>
         <link rel="preload" aria-label="background-image" href="/background.webp" as="image" />
       </head>
-      <body style={{ backgroundColor: '#020617' }} className={`${inter.variable} font-sans bg-brand-bg text-brand-dark antialiased w-full min-h-screen overflow-hidden`}>
+      <body style={{ backgroundColor: '#020617' }} className={`${inter.variable} font-sans bg-brand-bg text-brand-dark antialiased w-full min-h-screen`}>
         <JsonLd />
         <Navbar />
         <SmoothScroll>
