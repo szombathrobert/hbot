@@ -8,15 +8,14 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        // Itt mondjuk meg a Tailwindnek, hogy keresse a CSS változókat
-        brand: {
-          bg: 'rgb(var(--brand-bg) / <alpha-value>)',       // #F5F7FA
-          primary: 'rgb(var(--brand-primary) / <alpha-value>)', // #2C5D8A
-          light: 'rgb(var(--brand-light) / <alpha-value>)',   // #8FBCE6
-          dark: 'rgb(var(--brand-dark) / <alpha-value>)',     // #2B2F33
-          muted: 'rgb(var(--brand-muted) / <alpha-value>)',   // #5F6B75
-        }
+      keyframes: {
+        'fade-in-up': {
+          '0%': { opacity: '0', transform: 'translateY(24px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+      },
+      animation: {
+        'fade-in-up': 'fade-in-up 0.6s ease-out forwards',
       },
       fontFamily: {
         sans: ["var(--font-inter)", "sans-serif"],

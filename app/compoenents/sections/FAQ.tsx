@@ -41,7 +41,7 @@ export const FAQ = () => {
     }
 
     return (
-        <section id="gyik" className="relative w-full py-24 overflow-hidden flex items-center justify-center">
+        <section id="gyik" aria-label="Gyakori Kérdések" className="relative w-full py-24 overflow-hidden flex items-center justify-center">
 
             <div className="container mx-auto px-4 md:px-6 relative z-10">
 
@@ -53,7 +53,7 @@ export const FAQ = () => {
                         viewport={{ once: true }}
                         className="flex flex-col items-start lg:sticky lg:top-32"
                     >
-                        <Quote className="w-16 h-16 md:w-20 md:h-20 text-white/30 mb-6 fill-current transform rotate-180 self-start" />
+                        <Quote className="w-16 h-16 md:w-20 md:h-20 text-white/30 mb-6 fill-current transform rotate-180 self-start" aria-hidden="true" />
 
                         <h2 className="text-5xl md:text-6xl lg:text-7xl text-white mb-8 tracking-wider font-light leading-tight">
                             Gyakori <br />
@@ -61,7 +61,7 @@ export const FAQ = () => {
                         </h2>
 
                         <div className="relative mt-8 ml-4">
-                            <MessageCircleQuestion className="w-32 h-32 text-white stroke-1" />
+                            <MessageCircleQuestion className="w-32 h-32 text-white stroke-1" aria-hidden="true" />
                             <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-cyan-400/10 rounded-full blur-xl"></div>
                         </div>
                     </motion.div>
@@ -80,10 +80,12 @@ export const FAQ = () => {
                                 className="relative group"
                             >
                                 <button
+                                    aria-expanded={openIndex === index}
+                                    aria-controls={`faq-answer-${index}`}
                                     onClick={() => toggleQuestion(index)}
                                     className={`
                                         w-full text-left relative z-10
-                                        bg-gradient-to-r from-[#0f172a]/90 to-[#0f172a]/60 backdrop-blur-md
+                                        bg-linear-to-r from-[#0f172a]/90 to-[#0f172a]/60 backdrop-blur-md
                                         border-8 border-[#8FBCE6] rounded-full
                                         px-8 py-5 md:py-6
                                         hover:border-cyan-400/60 transition-all duration-300
@@ -92,18 +94,19 @@ export const FAQ = () => {
                                         ${openIndex === index ? 'border-cyan-400 shadow-[0_0_25px_rgba(6,182,212,0.2)]' : ''}
                                     `}
                                 >
-                                    <span className="text-lg md:text-xl font-bold text-white pr-4">
+                                    <h3 className="text-lg md:text-xl font-bold text-white pr-4 m-0">
                                         {item.question}
-                                    </span>
+                                    </h3>
 
                                     <div className="shrink-0 text-cyan-400">
-                                        {openIndex === index ? <Minus size={24} strokeWidth={3} /> : <Plus size={24} strokeWidth={3} />}
+                                        {openIndex === index ? <Minus size={24} strokeWidth={3} aria-hidden="true" /> : <Plus size={24} strokeWidth={3} aria-hidden="true" />}
                                     </div>
                                 </button>
 
                                 <AnimatePresence>
                                     {openIndex === index && (
                                         <motion.div
+                                            id={`faq-answer-${index}`}
                                             initial={{ height: 0, opacity: 0, marginTop: 0 }}
                                             animate={{ height: "auto", opacity: 1, marginTop: 12 }}
                                             exit={{ height: 0, opacity: 0, marginTop: 0 }}

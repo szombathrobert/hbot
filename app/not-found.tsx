@@ -7,8 +7,7 @@ import { AlertCircle, Home } from 'lucide-react'
 export default function NotFound() {
     return (
         <div className="min-h-screen bg-[#020617] flex items-center justify-center px-6 relative overflow-hidden">
-            {/* Háttér dekoráció */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none"></div>
 
             <div className="text-center relative z-10">
                 <motion.div
@@ -44,6 +43,7 @@ export default function NotFound() {
                 >
                     <Link
                         href="/"
+                        aria-label='HomeLink'
                         className="inline-flex items-center gap-2 bg-cyan-500 text-[#020617] px-8 py-4 rounded-full font-bold text-lg hover:bg-cyan-400 transition-all shadow-[0_0_20px_rgba(6,182,212,0.3)]"
                     >
                         <Home size={20} />

@@ -7,9 +7,9 @@ export const JsonLd = () => {
                 "@type": "MedicalClinic",
                 "@id": "https://endo-kapszula.hu/#clinic",
                 "name": "Endo-Kapszula Magánorvosi Centrum",
-                "url": "https://endo-kapszula.hu", // Ha ez a végleges domain, ha nem, írd át!
-                "logo": "https://endo-kapszula.hu/logo.png", // Ellenőrizd, hogy van-e ilyen fájl
-                "image": "https://endo-kapszula.hu/hero.webp", // A Hero képed
+                "url": "https://endo-kapszula.hu",
+                "logo": "https://endo-kapszula.hu/logo.png",
+                "image": "https://endo-kapszula.hu/hero.webp",
                 "description": "Székesfehérvár prémium hiperbárikus oxigénterápiás központja. Orvosi felügyelet, 1.5 ATA nyomás, poszt-COVID és regenerációs kezelések.",
                 "address": {
                     "@type": "PostalAddress",
@@ -18,7 +18,6 @@ export const JsonLd = () => {
                     "postalCode": "8000",
                     "addressCountry": "HU"
                 },
-                // FONTOS: Ezeket a koordinátákat a Google Mapsről néztem a Budai út 318-hoz:
                 "geo": {
                     "@type": "GeoCoordinates",
                     "latitude": "47.1932",
@@ -54,7 +53,6 @@ export const JsonLd = () => {
                 ]
             },
 
-            // 2. A SZOLGÁLTATÁS (TherapeuticProcedure)
             {
                 "@type": "TherapeuticProcedure",
                 "@id": "https://endo-kapszula.hu/#procedure",
@@ -71,7 +69,6 @@ export const JsonLd = () => {
                 }
             },
 
-            // 3. A FOLYAMAT (HowTo) - Ez alapján tudja az AI "lépésről lépésre" ajánlani
             {
                 "@type": "HowTo",
                 "@id": "https://endo-kapszula.hu/#process",
@@ -104,7 +101,6 @@ export const JsonLd = () => {
                 ]
             },
 
-            // 4. GYIK (FAQPage) - Ez segít bekerülni a Google "Emberek kérdezték még" dobozába
             {
                 "@type": "FAQPage",
                 "@id": "https://endo-kapszula.hu/#faq",

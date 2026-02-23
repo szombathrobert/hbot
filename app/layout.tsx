@@ -6,8 +6,7 @@ import { Footer } from "./compoenents/layout/Footer";
 import { JsonLd } from "./compoenents/JsonLd";
 import { SmoothScroll } from "./compoenents/SmoothScroll";
 
-// Az Inter betűtípus betöltése (latin karakterkészlettel)
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const inter = Inter({ subsets: ["latin"], display: 'swap', variable: "--font-inter" });
 
 export const metadata: Metadata = {
   title: 'Hiperbár Oxigénterápia Székesfehérvár | Endo-Kapszula Klinika',
@@ -22,7 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="hu" className="scroll-smooth">
-      <body className={`${inter.variable} font-sans bg-brand-bg text-brand-dark antialiased w-full min-h-screen bg-[url('/background.webp')] bg-cover bg-[48%_center] md:bg-center bg-no-repeat overflow-hidden`}>
+      <head>
+        <link rel="preload" aria-label="background-image" href="/background.webp" as="image" />
+      </head>
+      <body style={{ backgroundColor: '#020617' }} className={`${inter.variable} font-sans bg-brand-bg text-brand-dark antialiased w-full min-h-screen overflow-hidden`}>
         <JsonLd />
         <Navbar />
         <SmoothScroll>
