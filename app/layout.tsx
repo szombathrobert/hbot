@@ -9,8 +9,8 @@ import { SmoothScroll } from "./compoenents/SmoothScroll";
 const inter = Inter({ subsets: ["latin"], display: 'swap', variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: 'Hiperbár Oxigénterápia Székesfehérvár | Endo-Kapszula Klinika',
-  description: 'Prémium hiperbár oxigénterápia (HBOT) Székesfehérváron. Orvosi felügyelet, modern kapszulák, poszt-COVID és regenerációs kezelések. Foglaljon időpontot!',
+  title: 'Hiperbár Oxigénterápia Székesfehérvár | Endolife Longevity Központ',
+  description: 'Prémium hiperbár oxigénterápia (HBOT) Székesfehérváron. Orvosi felügyelet, poszt-COVID és regenerációs kezelések. Foglaljon időpontot!',
   keywords: ['hiperbár oxigénterápia', 'HBOT Székesfehérvár', 'oxigénterápia', 'long covid kezelés', 'sport regeneráció'],
 }
 
