@@ -6,20 +6,24 @@ import { Quote, MessageCircleQuestion, Plus, Minus } from 'lucide-react'
 
 const faqItems = [
     {
-        question: "Fájdalmas a kezelés?",
-        answer: "Nem, a hiperbár oxigénterápia teljesen fájdalommentes. A nyomásváltozás során (a kezelés elején és végén) hasonló érzést tapasztalhat, mint repüléskor a füldugulás, de ez nyeléssel vagy ásítással könnyen kiegyenlíthető."
+        question: "Hogyan támogatja a HBOT az agyi regenerációt?",
+        answer: "A hiperbárikus oxigénterápia (HBOT) során a plazmában oldott oxigén szintje 10-20-szorosára nő. Ez beindítja az angiogenezist (új erek képződését) és fokozza a neuroplaszticitást. A folyamat kulcsa a hyperoxic-hypoxic paradoxon, amely aktiválja a regeneratív jelátviteli útvonalakat, például a HIF-1α-t, segítve az agyi mikrokeringés helyreállítását."
     },
     {
-        question: "Hány alkalom szükséges?",
-        answer: "Ez nagyban függ a kezelés céljától és az Ön egészségügyi állapotától. Általános regenerációhoz és wellness célokra már 5-10 alkalom is érezhető változást hoz, míg krónikus problémák esetén hosszabb kúra javasolt. Az első konzultáción orvosunk személyre szabott tervet készít."
+        question: "Hány alkalom szükséges a valódi változáshoz?",
+        answer: "A regenerációs hatás kumulatív. A modern longevity protokollok szerint a sejtszintű változásokhoz (mint a telomerhossz növekedése vagy a szeneszcens sejtek csökkenése) heti 3-5 alkalom javasolt egy 6-12 hetes cikluson belül. Poszt-COVID szindróma vagy 'brain fog' esetén az egyéni állapotfelmérés alapján orvosaink személyre szabott kúrát állítanak össze."
     },
     {
-        question: "Mit vihetek be a kabinba?",
-        answer: "A kabinba kényelmes, pamut ruházatban érdemes beülni. Bevihet könyvet, magazint, de elektronikus eszközöket (telefon, tablet) biztonsági okokból kérjük kint hagyni. A kezelés alatt relaxálhat, olvashat vagy akár aludhat is."
+        question: "Segíthet a kezelés a poszt-COVID tüneteken?",
+        answer: "Igen, a kutatások szerint a HBOT hatékonyan csökkenti a neuroinflammációt (agyi gyulladást) és javítja az endothel diszfunkciót, amelyek a 'brain fog' fő kiváltói. A kezelés támogatja a mitokondriális működést, így segít visszanyerni a mentális fókuszt és csökkenteni a krónikus fáradtságot."
     },
     {
-        question: "Mik az ellenjavallatok?",
-        answer: "Bizonyos állapotok esetén (pl. kezeletlen légmell, súlyos szívbetegség, akut vírusos fertőzés, láz) a kezelés nem javasolt. Ezért minden esetben orvosi konzultáció és állapotfelmérés előzi meg az első alkalmat a biztonság érdekében."
+        question: "Milyen előnyei vannak a komplex programnak (PEMF + NIR)?",
+        answer: "A komplex Longevity programunkban a HBOT-ot pulzált elektromágneses (PEMF) és közeli infravörös (NIR-PBM) terápiával ötvözzük. Míg a HBOT az oxigénkínálatot növeli, a PEMF a kapilláris perfúziót javítja, a NIR pedig közvetlenül a mitokondriális energiatermelést (ATP) fokozza, így a módszerek szinergiában támogatják a regenerációt."
+    },
+    {
+        question: "Vannak ellenjavallatok?",
+        answer: "A biztonság elsődleges. Kezeletlen légmell, bizonyos tüdőbetegségek vagy akut lázas fertőzés esetén a kezelés nem javasolt. Ezért klinikánkon minden kúrát részletes orvosi konzultáció és állapotfelmérés előz meg, ahol szakembereink megállapítják a terápiás alkalmasságot."
     }
 ]
 
@@ -41,7 +45,7 @@ export const FAQ = () => {
     }
 
     return (
-        <section id="gyik" aria-label="Gyakori Kérdések" className="relative w-full py-24 overflow-hidden flex items-center justify-center">
+        <section id="gyik" aria-label="Gyakori Kérdések a hiperbárikus oxigénterápiáról és agyi regenerációról" className="relative w-full py-24 overflow-hidden flex items-center justify-center">
 
             <div className="container mx-auto px-4 md:px-6 relative z-10">
 

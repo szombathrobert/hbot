@@ -10,7 +10,7 @@ export const FunctionalPage = () => {
         <LazyMotion features={domAnimation}>
             <section
                 id='indikaciok'
-                aria-label="A hiperbár oxigénterápia működési alapelvei"
+                aria-label="A hiperbárikus oxigénterápia (HBOT) működési alapelvei és a hyperoxic-hypoxic paradoxon"
                 className="relative w-full py-24 overflow-hidden flex items-center justify-center"
             >
                 <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -25,7 +25,7 @@ export const FunctionalPage = () => {
                         >
                             <Image
                                 src="/mukodesi_alapelv.webp"
-                                alt="Hiperbárikus oxigénkabin működése"
+                                alt="A hiperbárikus oxigénterápia (HBOT) sejtszintű hatásmechanizmusa"
                                 fill
                                 sizes="(max-width: 1024px) 100vw, 50vw"
                                 className="object-cover"
@@ -48,8 +48,8 @@ export const FunctionalPage = () => {
                                 />
 
                                 <h2 className="text-4xl md:text-5xl lg:text-6xl leading-[1.08] mb-8 text-white text-left font-light">
-                                    Működési
-                                    <span className="text-white font-bold block md:inline"> alapelvek</span>
+                                    Sejtszintű
+                                    <span className="text-white font-bold block md:inline"> megújulás</span>
                                 </h2>
                             </m.div>
 
@@ -61,11 +61,16 @@ export const FunctionalPage = () => {
                                 className="space-y-6"
                             >
                                 <p className="text-gray-200 text-justify text-lg md:text-xl font-light leading-relaxed">
-                                    A hiperbár oxigénterápia egy korszerű orvosi eljárás, amely során a páciens tiszta oxigént lélegzik be egy speciális, megnövelt nyomású kamrában. Normál körülmények között az oxigént főleg a vörösvérsejtek szállítják. A hiperbár környezetben viszont a megnövelt nyomás miatt sokkal több oxigén oldódik fel a vérplazmában, így az oxigén mélyebben és hatékonyabban jut el a szövetekhez.
+                                    A <strong>hiperbárikus oxigénterápia (HBOT)</strong> során a páciens megnövelt légköri nyomás alatt (1.3–2.5 ATA) tiszta oxigént lélegez be. Ennek hatására a vérplazmában oldott oxigén mennyisége akár 10–20-szorosára is nőhet, így az oxigén hemoglobin nélkül is képes eljutni a mikrokárosodott, rosszul perfundált szövetekbe.
                                 </p>
 
                                 <p className="text-gray-200 text-justify text-lg md:text-xl font-light leading-relaxed">
-                                    Ez segíti a gyógyulást és a regenerációt, csökkenti a gyulladást, és támogatja a sérült vagy oxigénhiányos területek helyreállítását. A prevenció és a longevity (hosszú, egészséges élet) támogatásában is világszerte elterjedt módszer.
+                                    A modern kutatások legfontosabb felismerése a <strong>hyperoxic-hypoxic paradoxon</strong>. A sejtek nem csupán az abszolút oxigénszintre, hanem annak változására reagálnak. A terápia után a normál oxigénszintre való visszatérést a szervezet relatív hipoxiaként (oxigénhiányként) érzékeli.
+
+                                </p>
+
+                                <p className="text-gray-200 text-justify text-lg md:text-xl font-light leading-relaxed">
+                                    Ez az érzékelt változás erőteljes biológiai folyamatokat indít be: aktiválja a kapillárisok újraképződését (angiogenezis), őssejteket mobilizál a csontvelőből, és támogatja a neuroplaszticitást. A HBOT ma már nem pusztán oxigénpótlás, hanem a <strong>longevity</strong> és az <strong>agyi regeneráció</strong> egyik leghatékonyabb sejtszintű jelátviteli stimulusa.
                                 </p>
                             </m.div>
                         </div>

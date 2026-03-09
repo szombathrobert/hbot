@@ -1,24 +1,23 @@
 'use client'
 
 import { LazyMotion, domAnimation, m, type Variants } from 'framer-motion'
-import { Quote } from 'lucide-react'
 
 const pressureTypes = [
     {
         title: "1.2 ATA",
-        desc: "SOFT"
+        desc: "SOFT – Prevenció és adaptáció"
     },
     {
         title: "1.3 ATA",
-        desc: "MILD",
+        desc: "MILD – Mikrokeringés támogatása",
     },
     {
         title: "1.4 ATA",
-        desc: "MEDIUM",
+        desc: "MEDIUM – Sejtszintű energiafokozás",
     },
     {
         title: "1.5 ATA",
-        desc: "THERAPY",
+        desc: "THERAPY – Célzott agyi regeneráció",
     }
 ]
 
@@ -40,7 +39,7 @@ const cardVariants: Variants = {
 export const DoctorPressure = () => {
     return (
         <LazyMotion features={domAnimation}>
-            <section aria-label="Orvosi nyomásfokozatok és hatásaik" className="relative w-full py-24 overflow-hidden flex items-center justify-center">
+            <section aria-label="Orvosi hiperbárikus nyomásfokozatok és szöveti diffúzió" className="relative w-full py-24 overflow-hidden flex items-center justify-center">
 
                 <div className="absolute inset-0"></div>
 
@@ -56,7 +55,7 @@ export const DoctorPressure = () => {
                                 className="mb-16"
                             >
                                 <h2 className="text-4xl md:text-5xl lg:text-6xl text-white mb-4 tracking-wider uppercase font-light leading-tight">
-                                    Orvosi <br />
+                                    Célzott <br />
                                     <span className='font-bold block mt-2'>Nyomásfokozatok</span>
                                 </h2>
                             </m.div>
@@ -74,7 +73,7 @@ export const DoctorPressure = () => {
 
                                         <div>
                                             <h3 className="text-3xl font-bold text-white mb-1">{item.title}</h3>
-                                            <p className="text-[#8FBCE6] font-medium tracking-widest text-sm">{item.desc}</p>
+                                            <p className="text-[#8FBCE6] font-medium tracking-widest text-sm uppercase">{item.desc}</p>
                                         </div>
                                     </m.div>
                                 ))}
@@ -101,9 +100,10 @@ export const DoctorPressure = () => {
                                 border-r border-r-cyan-200/30
                             `}>
                                 <p className="text-white text-lg md:text-xl leading-relaxed font-light text-justify drop-shadow-md">
-                                    A hiperbár oxigénterápia hatékonyságában kulcsszerepet játszanak a megfelelően beállított nyomási fokozatok. A kezelés során alkalmazott, a normál légköri nyomásnál magasabb érték teszi lehetővé, hogy az oxigén nagyobb mennyiségben oldódjon fel a vérplazmában, és így eljusson a nehezebben ellátható szövetekhez is.
+                                    A hiperbárikus oxigénterápia (HBOT) hatékonyságának kulcsa a <strong>fizikai Henry-törvény</strong> gyakorlati alkalmazása. A célzottan megnövelt légköri nyomás alatt az oxigén nem csupán a vörösvértestekhez kötődik, hanem közvetlenül a vérplazmában is feloldódik, mennyisége akár a 10-20-szorosára nő.
+
                                     <br /><br />
-                                    A nyomás szintjét mindig az adott célhoz (legyen az gyógyítás, regeneráció vagy prevenció) igazítják orvosaink, mivel különböző nyomástartományok eltérő élettani hatásokat váltanak ki. A fokozatos nyomásnövelés és csökkentés nemcsak a kezelés hatékonyságát segíti, hanem a <strong className="text-white font-bold">biztonságot</strong> is szolgálja.
+                                    Ez a folyamat drasztikusan megnöveli az <strong>oxigén diffúziós távolságát</strong> a szövetekben. Az extra energia így eljut a rosszul perfundált, mikrokárosodott vagy agyi mikroiszkémiás területekre is. Klinikánkon a nyomásszintet mindig a páciens egyéni poszt-COVID vagy longevity protokolljához igazítjuk orvosi kontroll mellett.
                                 </p>
                             </div>
                         </m.div>

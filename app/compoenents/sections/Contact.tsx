@@ -37,7 +37,7 @@ const itemVariants: Variants = {
 export const Contact = () => {
     return (
         <LazyMotion features={domAnimation}>
-            <section id="kapcsolat" aria-label="A klinika elérhetőségei és térkép" className="relative w-full py-24 overflow-hidden flex items-center justify-center">
+            <section id="kapcsolat" aria-label="Endolife Longevity Klinika elérhetőségei és helyszíne" className="relative w-full py-24 overflow-hidden flex items-center justify-center">
 
                 <div className="absolute inset-0"></div>
 
@@ -55,12 +55,12 @@ export const Contact = () => {
                                 <Quote className="w-16 h-16 md:w-20 md:h-20 text-white/30 mb-6 fill-current transform rotate-180 self-start" aria-hidden="true" />
 
                                 <h2 className="text-5xl md:text-6xl lg:text-7xl text-white mb-6 tracking-wider font-light leading-tight">
-                                    Klinikánk <br />
-                                    <span className='font-bold'>Elérhetőségei</span>
+                                    Longevity <br />
+                                    <span className='font-bold'>Klinikánk</span>
                                 </h2>
 
                                 <p className="text-[#8FBCE6] text-lg md:text-xl font-light leading-relaxed max-w-md">
-                                    Keressen minket bizalommal kérdés, vagy időpontfoglalás esetén az alábbi elérhetőségeken.
+                                    Kérdése van az agyi regenerációval vagy longevity programunkkal kapcsolatban? Keressen minket bizalommal.
                                 </p>
                             </m.div>
 
@@ -75,7 +75,7 @@ export const Contact = () => {
                                     src="https://maps.google.com/maps?q=Endo-Kapszula+Magánorvosi+Centrum+Székesfehérvár&t=&z=15&ie=UTF8&iwloc=&output=embed"
                                     width="100%"
                                     height="100%"
-                                    title='Térkép a klinika helyzetével'
+                                    title='Endolife Longevity Klinika Székesfehérvár - Térkép'
                                     style={{ border: 0 }}
                                     allowFullScreen
                                     loading="lazy"

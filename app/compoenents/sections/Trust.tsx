@@ -6,20 +6,20 @@ import { Quote, Star, ShieldAlert } from 'lucide-react'
 const reviews = [
     {
         name: "Kovács Péter",
-        role: "Maratonfutó",
-        text: "Sérülés után kerestem gyors megoldást. 5 alkalom után érezhető volt a javulás, a gyulladás teljesen megszűnt a térdemben.",
+        role: "Sportrehabilitáció",
+        text: "Sérülés után kerestem gyors megoldást. Az oxigénterápia segítségével a gyulladás és az ödéma drasztikusan csökkent, a regenerációm pedig feleannyi időt vett igénybe.",
         stars: 5
     },
     {
         name: "Nagy Anna",
-        role: "Post-COVID páciens",
-        text: "Hónapokig küzdöttem a fáradtsággal. Az oxigenterapia.hu-nál végre visszakaptam az energiaszintemet. Profi környezet, kedves személyzet.",
+        role: "Poszt-COVID regeneráció",
+        text: "Hónapokig küzdöttem a 'brain fog' és a kimerültség tüneteivel. Az Endolife Longevity Klinikán végzett HBOT kúra után végre visszakaptam a mentális fókuszomat.",
         stars: 5
     },
     {
         name: "B. Tamás",
-        role: "Vállalkozó",
-        text: "Mentális frissesség miatt járok. Ebédszünetben 60 perc, és délután úgy vág az agyam, mintha reggel lenne.",
+        role: "Longevity & Mentális teljesítmény",
+        text: "Agyi regeneráció és megelőzés céljából járok. A komplex program (HBOT + NIR) után a koncentrációm és a szellemi frissességem érezhetően javult.",
         stars: 5
     }
 ]
@@ -27,7 +27,7 @@ const reviews = [
 export const Trust = () => {
     return (
         <LazyMotion features={domAnimation}>
-            <section id="rolunk" aria-label="Pácienseink véleménye" className="relative w-full py-24 overflow-hidden flex items-center justify-center">
+            <section id="rolunk" aria-label="Pácienseink véleménye a hiperbárikus oxigénterápiáról" className="relative w-full py-24 overflow-hidden flex items-center justify-center">
                 <div className="container mx-auto px-4 md:px-6 relative z-10">
 
                     <m.div
@@ -44,7 +44,7 @@ export const Trust = () => {
                         </h2>
 
                         <span className="block w-full md:w-auto text-center text-sm md:text-base font-medium text-[#8FBCE6] uppercase tracking-widest mt-8">
-                            endolife longevity egészségklinika pácienseinek tapasztalata
+                            Endolife Longevity Egészségklinika pácienseinek tapasztalata
                         </span>
                     </m.div>
 
@@ -90,7 +90,7 @@ export const Trust = () => {
                         <div className="text-sm text-gray-300 leading-relaxed text-center md:text-left">
                             <p className="font-bold text-white mb-2 text-base uppercase tracking-wider">Orvosi jogi nyilatkozat:</p>
                             <p className="font-light">
-                                A weboldalon található információk tájékoztató jellegűek. A hiperbárikus oxigénterápia (HBOT) egy kiegészítő terápia, amely nem helyettesíti a szakszerű orvosi diagnózist, tanácsadást és kezelést. Súlyos egészségügyi panaszok esetén kérjük, minden esetben konzultáljon kezelőorvosával a terápia megkezdése előtt. Az oxigenterapia.hu nem ígér 100%-os gyógyulást, az eredmények egyénenként eltérőek lehetnek.
+                                A weboldalon található információk tájékoztató jellegűek. A hiperbárikus oxigénterápia (HBOT) egy modern kiegészítő regeneratív eljárás, amely nem helyettesíti a szakszerű orvosi diagnózist és kezelést. Az Endolife Longevity Egészségklinika minden kezelést orvosi konzultációhoz köt a biztonság és a hatékonyság érdekében.
                             </p>
                         </div>
                     </m.div>

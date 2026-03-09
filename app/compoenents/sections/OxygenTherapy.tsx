@@ -9,7 +9,7 @@ import Link from 'next/link'
 export const OxygenTherapy = ({ city = 'Székesfehérvár' }: { city?: string }) => {
     return (
         <LazyMotion features={domAnimation}>
-            <section aria-label="Oxigénterápia bemutatása" className="relative w-full py-24 overflow-hidden flex items-center justify-center">
+            <section aria-label="Hiperbárikus Oxigénterápia és agyi regeneráció bemutatása" className="relative w-full py-24 overflow-hidden flex items-center justify-center">
 
                 <div className="flex flex-col lg:flex-row w-full lg:min-h-137.5">
 
@@ -29,19 +29,19 @@ export const OxygenTherapy = ({ city = 'Székesfehérvár' }: { city?: string })
                                 transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
                             >
                                 <span className="text-white font-bold tracking-widest uppercase text-xs mb-4 block">
-                                    Orvosi Hiperbárikus Centrum — {city}
+                                    Endolife Longevity Centrum — {city}
                                 </span>
 
                                 <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.05] mb-5 tracking-tight">
+                                    Hiperbárikus <br />
                                     Oxigénterápia <br />
-                                    Prémium, orvosi <br />
-                                    felügyelettel.
+                                    a mentális vitalitásért.
                                 </h2>
 
                                 <p className="text-lg md:text-xl text-white mb-6 leading-relaxed font-medium">
-                                    <strong>Longevity</strong> (oxigenterapia.hu) várja a pácienseket {city}on.<br className="hidden lg:block" />
-                                    Gyorsabb regeneráció, poszt-COVID támogatás és teljesítményfokozás <br className="hidden lg:block" />
-                                    orvosi protokoll szerint.
+                                    A <strong>Longevity programunk</strong> {city}on a modern regenerációs orvoslást hozza el Önnek.
+                                    A terápia alatt a plazmában oldott oxigén mennyisége drámaian megnő, így az hemoglobin nélkül is eljut a mikrokárosodott szövetekbe.
+                                    Kiválóan támogatja a poszt-COVID „brain fog” leküzdését, a sejtszintű energiatermelést és az agyi regenerációt.
                                 </p>
                             </m.div>
 
@@ -53,9 +53,10 @@ export const OxygenTherapy = ({ city = 'Székesfehérvár' }: { city?: string })
                                 className="space-y-3 mb-8"
                             >
                                 {[
-                                    'Azonnal elérhető időpontok — nincs várólista',
-                                    '100% orvosi oxigén, orvosi felügyelet',
-                                    'Tág, kényelmes egyhelyiséges kabin'
+                                    'A plazmában oldott oxigénszint akár 10-20-szorosára nő',
+                                    'Támogatja az agyi mikrokeringést és a kapillárisok újraképződését',
+                                    'Célzott regeneráció poszt-COVID szindróma és krónikus stressz esetén',
+                                    'Prémium környezet, kényelmes egyhelyiséges kabinban'
                                 ].map((item, i) => (
                                     <li key={i} className="flex items-center gap-3 text-white font-medium text-lg">
                                         <Check className="w-5 h-5 text-cyan-400 shrink-0" strokeWidth={2.5} aria-hidden />
@@ -73,7 +74,7 @@ export const OxygenTherapy = ({ city = 'Székesfehérvár' }: { city?: string })
                             >
                                 <Image
                                     src="/oxygentherapy.webp"
-                                    alt="Hiperbárikus oxigénkabin"
+                                    alt="Hiperbárikus oxigénterápiás kabin a mentális frissességért"
                                     fill
                                     sizes="(max-width: 1024px) 100vw, 0vw"
                                     className="object-cover"
@@ -107,7 +108,7 @@ export const OxygenTherapy = ({ city = 'Székesfehérvár' }: { city?: string })
                     >
                         <Image
                             src="/oxygentherapy.webp"
-                            alt="Hiperbárikus oxigénkabin"
+                            alt="Hiperbárikus oxigénterápiás kabin a mentális frissességért"
                             fill
                             sizes="(max-width: 1024px) 0vw, 25vw"
                             className="object-cover rounded-l-3xl shadow-[-20px_0_30px_rgba(0,0,0,0.5)]"

@@ -6,18 +6,18 @@ import Image from 'next/image'
 
 const steps = [
     {
-        title: "Érkezés és konzultáció",
-        desc: "Érkezés után egészségklinikánk orvosai felmérik az ön egészségügyi állapotát és kizárják a kontraindikációkat.",
+        title: "Orvosi konzultáció",
+        desc: "A folyamat egy alapos orvosi állapotfelméréssel kezdődik. Szakembereink kizárják a kontraindikációkat, és összeállítják a személyre szabott poszt-COVID vagy longevity regenerációs protokollt.",
         imageSrc: "/consultation.webp"
     },
     {
-        title: "Elhelyezkedés",
-        desc: "Az alkalmasság megállapítását követően páciensünk elfoglalhatja helyét a hiperbárikus oxigénterápia kabinba.",
+        title: "Túlnyomásos fázis (1.3 - 2.5 ATA)",
+        desc: "Páciensünk kényelmesen elhelyezkedik a prémium hiperbárikus kabinban. A nyomást fokozatosan a terápiás szintre emeljük, amely a fizikai törvényszerűségek alapján lehetővé teszi a vérplazma oxigénnel való telítését.",
         imageSrc: "/placement.webp"
     },
     {
-        title: "Merülés az oxigénfürdőbe",
-        desc: "A kabin elfoglalása után fokozatosan emelkedik a nyomás. A célnyomás elérése után pácienseink tiszta oxigént lélegeznek be.",
+        title: "Hyperoxia és adaptáció",
+        desc: "A 60–90 perces kezelés alatt 100%-os orvosi oxigént lélegez be. A terápia végén a normál nyomásra való visszatérés (hyperoxic-hypoxic paradoxon) indítja be az őssejt-mobilizációt és az új erek képződését. [Image of hyperbaric chamber pressure curve diagram]",
         imageSrc: "/oxygen.webp"
     }
 ]
@@ -41,7 +41,7 @@ const itemVariants: Variants = {
 export const Process = () => {
     return (
         <LazyMotion features={domAnimation}>
-            <section id="folyamat" aria-label="A kezelés menete" className="relative w-full py-24 overflow-hidden flex items-center justify-center">
+            <section id="folyamat" aria-label="A hiperbárikus oxigénterápia (HBOT) kezelés menete és protokollja" className="relative w-full py-24 overflow-hidden flex items-center justify-center">
 
                 <div className="container mx-auto px-4 md:px-6 relative z-10">
 
@@ -55,11 +55,11 @@ export const Process = () => {
                         <Quote className="self-start w-16 h-16 md:w-20 md:h-20 text-white/30 mb-6 fill-current transform rotate-180" aria-hidden="true" />
 
                         <h2 className="text-4xl md:text-5xl lg:text-6xl text-white mb-2 tracking-wider uppercase font-light">
-                            Így zajlik egy <span className='font-bold'>KEZELÉS</span>
+                            Így zajlik a <span className='font-bold'>LONGEVITY Oxigénterápia</span>
                         </h2>
 
                         <span className="block w-full md:w-auto text-center md:text-left text-sm md:text-base font-medium text-[#8FBCE6] uppercase tracking-widest mt-8 md:transform md:translate-x-12">
-                            Lépésről lépésre az endolife longevity egészségklinikán
+                            Lépésről lépésre az Endolife Longevity Egészségklinikán
                         </span>
                     </m.div>
 
@@ -97,17 +97,17 @@ export const Process = () => {
                                     <div className="block md:hidden w-full h-64 relative rounded-xl overflow-hidden mt-auto border border-white/10">
                                         <Image
                                             src={step.imageSrc}
-                                            alt={step.title}
+                                            alt={`${step.title} a hiperbárikus oxigénterápia során`}
                                             fill
                                             className="object-cover"
                                         />
                                     </div>
                                 </div>
 
-                                <div className="hidden md:block absolute -bottom-12 -right-8 w-72 h-48 lg:w-80 lg:h-52 z-20 rounded-4xl overflow-hidden shadow-2xl group-hover:scale-105 transition-transform duration-500">
+                                <div className="hidden md:block absolute -bottom-12 -right-8 w-72 h-48 lg:w-80 lg:h-44 z-20 rounded-4xl overflow-hidden shadow-2xl group-hover:scale-105 transition-transform duration-500">
                                     <Image
                                         src={step.imageSrc}
-                                        alt={step.title}
+                                        alt={`${step.title} a hiperbárikus oxigénterápia során`}
                                         fill
                                         className="object-cover"
                                     />

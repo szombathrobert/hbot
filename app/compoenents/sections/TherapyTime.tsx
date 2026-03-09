@@ -4,12 +4,12 @@ import { LazyMotion, domAnimation, m, type Variants } from 'framer-motion'
 
 const treatmentTime = [
     {
-        title: "30 perces kezelés",
-        desc: "Gyors felfrissülés, mentális fókusz javítása"
+        title: "60 perces kezelés",
+        desc: "Alap regenerációs protokoll – Mikrokeringés és agyi energia támogatása"
     },
     {
-        title: "60 perces kezelés",
-        desc: "Az ajánlott orvosi protokoll a mélyebb regenerációért."
+        title: "90 perces kezelés",
+        desc: "Longevity protokoll – Maximális őssejt mobilizáció és sejtszintű megújulás"
     }
 ]
 
@@ -32,7 +32,7 @@ const itemVariants: Variants = {
 export const TherapyTime = () => {
     return (
         <LazyMotion features={domAnimation}>
-            <section id="időtartam" aria-label="Kezelési időtartamok" className="relative w-full py-24 overflow-hidden flex items-center justify-center">
+            <section id="időtartam" aria-label="A hiperbárikus oxigénterápia kezelési időtartamai és ciklusai" className="relative w-full py-24 overflow-hidden flex items-center justify-center">
                 <div className="container mx-auto px-4 md:px-6 relative z-10">
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
@@ -57,7 +57,9 @@ export const TherapyTime = () => {
                                 border-r border-r-cyan-200/30
                             `}>
                                 <p className="text-white text-lg md:text-xl leading-relaxed font-light text-justify drop-shadow-md">
-                                    A hiperbár oxigénterápia során a kezelési idő hossza szintén meghatározó tényező a kívánt hatás elérésében. Az egyes alkalmak időtartama befolyásolja, hogy mennyi oxigén jut be a szervezetbe, és milyen mértékben tud az hasznosulni a sejtek szintjén. A megfelelően beállított időtartam elősegíti a regenerációs folyamatokat és a szervezet egyensúlyának támogatását. Emellett a kezelések rendszeressége és a teljes kúra hossza is kulcsfontosságú, hiszen a hiperbár terápia hatása gyakran kumulatív, vagyis több alkalom során épül fel a leginkább érezhető eredmény.
+                                    A hiperbárikus oxigénterápia (HBOT) hatása időfüggő és erősen <strong>kumulatív</strong>. A javasolt 60–90 perces időtartam biztosítja, hogy a plazmában oldott oxigénszint maximalizálódjon. A kezelés végén a normál oxigénszintre való visszatérés aktiválja a hipoxiás adaptációs mechanizmusokat (HIF-1α útvonal).
+                                    <br /><br />
+                                    Ez a folyamat elengedhetetlen a kapillárisok újraképződéséhez (angiogenezis) és az endothel progenitor őssejtek mobilizációjához a csontvelőből. A tartós longevity eredményekhez – mint például a <strong>telomerhossz növekedése</strong> és a <strong>szeneszcens (öregedő) sejtek csökkenése</strong> – orvosi protokolljaink heti 3–5 alkalmat javasolnak egy 6–12 hetes cikluson belül.
                                 </p>
                             </div>
                         </m.div>
@@ -72,7 +74,7 @@ export const TherapyTime = () => {
                             >
                                 <h2 className="text-4xl md:text-5xl lg:text-6xl text-white mb-4 tracking-wider uppercase font-light leading-tight text-center lg:text-left">
                                     Kezelési <br />
-                                    <span className='font-bold block mt-2'> Időtartamok</span>
+                                    <span className='font-bold block mt-2'> Protokollok</span>
                                 </h2>
                             </m.div>
 

@@ -20,10 +20,10 @@ export const Navbar = () => {
   }, [])
 
   const navLinks = [
-    { name: 'Mire jó?', href: '#indikaciok' },
-    { name: 'Terápia menete', href: '#folyamat' },
+    { name: 'Hogyan segít?', href: '#indikaciok' },
+    { name: 'Longevity Program', href: '#hbot' },
+    { name: 'Kezelés menete', href: '#folyamat' },
     { name: 'Bérletek', href: '#arak' },
-    { name: 'Vélemények', href: '#rolunk' },
     { name: 'Kapcsolat', href: '#kapcsolat' },
   ]
 

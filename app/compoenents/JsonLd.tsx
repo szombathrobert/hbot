@@ -2,15 +2,14 @@ export const JsonLd = () => {
     const structuredData = {
         "@context": "https://schema.org",
         "@graph": [
-            // 1. A KLINIKA (MedicalClinic) - A valós székesfehérvári adatokkal
             {
                 "@type": "MedicalClinic",
-                "@id": "https://endo-kapszula.hu/#clinic",
-                "name": "Endo-Kapszula Magánorvosi Centrum",
-                "url": "https://endo-kapszula.hu",
-                "logo": "https://endo-kapszula.hu/logo.png",
-                "image": "https://endo-kapszula.hu/hero.webp",
-                "description": "Székesfehérvár prémium hiperbárikus oxigénterápiás központja. Orvosi felügyelet, 1.5 ATA nyomás, poszt-COVID és regenerációs kezelések.",
+                "@id": "https://oxigenterapia.hu/#clinic",
+                "name": "Endolife Longevity Magánorvosi Centrum",
+                "url": "https://oxigenterapia.hu/",
+                "logo": "https://oxigenterapia.hu/logo.png",
+                "image": "https://oxigenterapia.hu/hero.webp",
+                "description": "Székesfehérvár vezető longevity központja. Hiperbárikus oxigénterápia (HBOT), agyi regeneráció, poszt-COVID rehabilitáció és sejtszintű anti-aging kezelések orvosi felügyelettel.",
                 "address": {
                     "@type": "PostalAddress",
                     "streetAddress": "Budai út 318.",
@@ -26,99 +25,41 @@ export const JsonLd = () => {
                 "telephone": "+3622999640",
                 "email": "recepcio@endo-kapszula.hu",
                 "priceRange": "45000 Ft - 120000 Ft",
-                "openingHoursSpecification": [
-                    {
-                        "@type": "OpeningHoursSpecification",
-                        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                        "opens": "08:00",
-                        "closes": "20:00"
-                    }
-                ],
                 "medicalSpecialty": [
-                    {
-                        "@type": "MedicalSpecialty",
-                        "name": "Hiperbárikus Medicina",
-                        "alternateName": "Hyperbaric Oxygen Therapy"
-                    },
-                    {
-                        "@type": "MedicalSpecialty",
-                        "name": "Rehabilitáció",
-                        "alternateName": "Post-COVID Rehabilitation"
-                    },
-                    {
-                        "@type": "MedicalSpecialty",
-                        "name": "Sportorvoslás",
-                        "alternateName": "Sports Recovery"
-                    }
+                    "Hyperbaric Medicine",
+                    "Regenerative Medicine",
+                    "Neurological Rehabilitation",
+                    "Sports Medicine"
                 ]
             },
-
             {
                 "@type": "TherapeuticProcedure",
-                "@id": "https://endo-kapszula.hu/#procedure",
-                "name": "Hiperbárikus Oxigénterápia (HBOT)",
-                "provider": { "@id": "https://endo-kapszula.hu/#clinic" },
-                "description": "Orvosi tisztaságú oxigén belégzése emelt nyomáson (max 1.5 ATA). Segíti a sejtszintű regenerációt, gyulladáscsökkentést és a sebgyógyulást.",
-                "bodyLocation": "Whole body",
-                "procedureType": "Noninvasive",
-                "status": "Active",
-                "instrument": {
-                    "@type": "MedicalDevice",
-                    "name": "Hard Shell Hyperbaric Chamber",
-                    "description": "Merevfalú, professzionális, légkondicionált kapszula."
-                }
+                "@id": "https://oxigenterapia.hu/#procedure",
+                "name": "Hiperbárikus Oxigénterápia és Neuro-regeneráció",
+                "provider": { "@id": "https://oxigenterapia.hu/#clinic" },
+                "description": "Sejtszintű regenerációs eljárás 1.3-1.5 ATA nyomáson. Elősegíti az angiogenezist, növeli a telomerhosszt és csökkenti a neuroinflammációt.",
+                "indication": ["Post-COVID brain fog", "Chronic fatigue", "Cognitive decline", "Anti-aging"],
+                "howItWorks": "A hyperoxic-hypoxic paradoxon révén aktiválja a szervezet öngyógyító folyamatait és az őssejt-mobilizációt."
             },
-
-            {
-                "@type": "HowTo",
-                "@id": "https://endo-kapszula.hu/#process",
-                "name": "Hogyan zajlik egy HBOT kezelés az Endo-Kapszulánál?",
-                "step": [
-                    {
-                        "@type": "HowToStep",
-                        "position": 1,
-                        "name": "Érkezés és Konzultáció",
-                        "text": "Orvosi állapotfelmérés és kontraindikációk kizárása."
-                    },
-                    {
-                        "@type": "HowToStep",
-                        "position": 2,
-                        "name": "Elhelyezkedés a kamrában",
-                        "text": "Beszállás a tágas kabinba kényelmes ruházatban."
-                    },
-                    {
-                        "@type": "HowToStep",
-                        "position": 3,
-                        "name": "Nyomásnövelés (Merülés)",
-                        "text": "A nyomás fokozatos emelése a terápiás szintre (pl. 1.3 - 1.5 ATA)."
-                    },
-                    {
-                        "@type": "HowToStep",
-                        "position": 4,
-                        "name": "Oxigénterápia",
-                        "text": "Tiszta oxigén belégzése maszkon keresztül 30-60 percig."
-                    }
-                ]
-            },
-
             {
                 "@type": "FAQPage",
-                "@id": "https://endo-kapszula.hu/#faq",
+                "@id": "https://oxigenterapia.hu/#faq",
                 "mainEntity": [
                     {
                         "@type": "Question",
-                        "name": "Fájdalmas a hiperbárikus oxigénterápia?",
-                        "acceptedAnswer": { "@type": "Answer", "text": "Nem, a kezelés teljesen fájdalommentes. A nyomásváltozáskor enyhe füldugulás érezhető, ami nyeléssel könnyen kiegyenlíthető." }
+                        "name": "Hogyan segít a HBOT a brain fog (agyköd) esetén?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "A HBOT csökkenti az agyi gyulladást és javítja a mikrokeringést, így közvetlenül támogatja a kognitív funkciók helyreállítását poszt-COVID szindróma esetén."
+                        }
                     },
                     {
                         "@type": "Question",
-                        "name": "Hány alkalom szükséges?",
-                        "acceptedAnswer": { "@type": "Answer", "text": "Általános regenerációhoz 5-10 alkalom, krónikus problémák esetén hosszabb kúra javasolt az orvosi konzultáció alapján." }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Mennyibe kerül a kezelés?",
-                        "acceptedAnswer": { "@type": "Answer", "text": "Egy 5 alkalmas bérlet 45.000 Ft, a 10 alkalmas 85.000 Ft. Az árak tartalmazzák az orvosi konzultációt is." }
+                        "name": "Milyen hatása van a terápiának a hosszú életre (longevity)?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Kutatások igazolják, hogy a protokollszerű HBOT kezelés képes növelni a telomerek hosszát és csökkenteni a szeneszcens, azaz öregedő sejtek számát a szervezetben."
+                        }
                     }
                 ]
             }

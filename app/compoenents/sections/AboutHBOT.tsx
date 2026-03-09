@@ -6,28 +6,28 @@ import { Activity, Brain, ShieldCheck, HeartPulse, Gauge, Check } from 'lucide-r
 
 const benefits = [
   {
-    icon: Activity,
-    title: "Sportrehabilitáció & Teljesítmény",
-    desc: "A szövetek extra oxigénellátása drasztikusan felgyorsítja a regenerációt.",
-    details: ["Izomsérülések gyorsabb gyógyulása", "Edzés utáni tejsavszint csökkentése", "Csonttörések támogatása"]
+    icon: ShieldCheck,
+    title: "Poszt-COVID & Kognitív Regeneráció",
+    desc: "A 'brain fog' és a krónikus fáradtság leküzdésének tudományosan alátámasztott módszere.",
+    details: ["Neuroinflammáció (gyulladás) csökkentése", "Mikrovaszkuláris károsodások helyreállítása", "Memória és figyelem javulása"]
   },
   {
     icon: Brain,
-    title: "Neurológia & Mentális Fókusz",
-    desc: "Az agy a test legnagyobb oxigénfogyasztója. Támogassa működését.",
-    details: ["'Brain fog' és krónikus fáradtság ellen", "Koncentráció javítása", "Migrén enyhítése"]
-  },
-  {
-    icon: ShieldCheck,
-    title: "Immunrendszer & Poszt-COVID",
-    desc: "A túlnyomásos oxigén segít csökkenteni a szervezetben lévő gyulladásokat.",
-    details: ["Elhúzódó COVID tünetek kezelése", "Általános gyulladáscsökkentés", "Védekezőképesség erősítése"]
+    title: "Agyi Regeneráció & Mentális Fókusz",
+    desc: "Célzott támogatás a krónikus stressz okozta koncentrációcsökkenés ellen.",
+    details: ["Agyi perfúzió (vérellátás) javítása", "BDNF szint és neuroplaszticitás növelése", "Új kapillárisok képződése (angiogenezis)"]
   },
   {
     icon: HeartPulse,
-    title: "Anti-Aging & Bőrgyógyászat",
-    desc: "A sejtszintű megújulás kulcsa. Szépségápolás belülről kifelé.",
-    details: ["Kollagéntermelés serkentése", "Nehezen gyógyuló sebek", "Bőr rugalmasságának javítása"]
+    title: "Longevity & Sejtszintű Fiatalodás",
+    desc: "Az öregedési folyamatok lassítása a sejtosztódás és a DNS szintjén.",
+    details: ["Telomer rövidülés lassítása", "Szeneszcens (öregedő) sejtek csökkentése", "Mitokondriális funkciók támogatása"]
+  },
+  {
+    icon: Activity,
+    title: "Komplex Terápiás Szinergia",
+    desc: "A HBOT hatását pulzált elektromágneses (PEMF) és fotobiomodulációs (NIR-PBM) terápiával ötvözzük.",
+    details: ["Sejtes jelátvitel és ATP termelés fokozása", "Prekapilláris értónus szabályozása", "Agyi energia-anyagcsere holisztikus védelme"]
   }
 ]
 
@@ -50,7 +50,7 @@ const itemVariants: Variants = {
 export const AboutHBOT = () => {
   return (
     <LazyMotion features={domAnimation}>
-      <section id="hbot" aria-label="A hiperbár oxigénterápia hatásai" className="relative w-full py-24 overflow-hidden flex items-center justify-center">
+      <section id="hbot" aria-label="A hiperbárikus oxigénterápia (HBOT) és longevity program hatásai" className="relative w-full py-24 overflow-hidden flex items-center justify-center">
         <div className="container mx-auto px-4 md:px-6 relative z-10">
 
           <m.div
@@ -58,14 +58,14 @@ export const AboutHBOT = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto mb-16"
+            className="text-center max-w-4xl mx-auto mb-16"
           >
-            <span className="text-sm font-bold uppercase tracking-wider mb-2 block text-white/90">Tudomány a háttérben</span>
+            <span className="text-sm font-bold uppercase tracking-wider mb-2 block text-white/90">Tudományos háttér és Longevity</span>
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-              Mire jó az oxigénterápia?
+              Az agyi regeneráció és a vitalitás pillérei
             </h2>
             <p className="text-lg leading-relaxed text-white">
-              Orvosi tisztaságú oxigént juttatunk el oda, ahová a szervezet önerőből már nem képes.
+              A hiperbárikus oxigénterápia (HBOT) és kiegészítő terápiáink sejtszinten támogatják a mikrokeringést, az oxigénellátást és az energiatermelést, ott is, ahol a szervezet önerőből már nem képes rá.
             </p>
           </m.div>
 
@@ -82,9 +82,11 @@ export const AboutHBOT = () => {
                   <Gauge className="w-8 h-8 text-cyan-800" aria-hidden="true" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold mb-3 text-brand-dark">A működési elv: Henry törvénye</h3>
+                  <h3 className="text-2xl font-bold mb-3 text-brand-dark">A kulcs: Oldott oxigén a plazmában</h3>
                   <p className="leading-relaxed text-brand-dark/90">
-                    Normál légköri nyomáson az oxigént a vörösvértestek szállítják. A HBOT kabinban uralkodó túlnyomás alatt azonban – a fizikai Henry-törvény értelmében – az oxigén <span className="font-semibold text-brand-dark">közvetlenül a vérplazmában oldódik fel</span>. Így a keringési zavarral küzdő területekre is eljut az energia.
+                    Normál légköri nyomáson az oxigén döntő részét a vörösvértestek (hemoglobin) szállítják. A HBOT kezelés alatt alkalmazott túlnyomás (1.3–2.5 ATA) révén azonban a fizikai Henry-törvény értelmében az oxigén <span className="font-semibold text-brand-dark">közvetlenül a vérplazmában oldódik fel</span>, mennyisége akár a 10-20-szorosára nő. Ezáltal hemoglobin nélkül is mélyen diffundál a szövetekbe, megindítva a mikrokárosodott régiók regenerációját.
+
+
                   </p>
                 </div>
               </div>

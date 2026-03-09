@@ -37,7 +37,7 @@ const itemVariants: Variants = {
 export const PricePage = () => {
     return (
         <LazyMotion features={domAnimation}>
-            <section id="arak" aria-label="Oxigénterápia bérlet árak" className="relative w-full py-24 overflow-hidden flex items-center justify-center">
+            <section id="arak" aria-label="Hiperbárikus oxigénterápia (HBOT) és Longevity bérlet árak" className="relative w-full py-24 overflow-hidden flex items-center justify-center">
 
                 <div className="container mx-auto px-4 md:px-6 relative z-10">
 
@@ -55,7 +55,7 @@ export const PricePage = () => {
                         </h2>
 
                         <span className="block w-full md:w-auto text-center md:text-left text-sm md:text-base font-medium text-[#8FBCE6] uppercase tracking-widest mt-8 md:transform md:translate-x-12">
-                            Ezért az endolife longevity egészségklinika bérleteket hozott létre
+                            Ezért az Endolife Longevity Egészségklinika bérleteket hozott létre
                         </span>
                     </m.div>
 
