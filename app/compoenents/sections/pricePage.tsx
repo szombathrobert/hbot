@@ -6,15 +6,15 @@ import { Quote } from 'lucide-react'
 const occasions = [
     {
         title: "5 alkalom",
-        price: "45.000 Ft",
+        price: "25.000 Ft",
     },
     {
         title: "10 alkalom",
-        price: "85.000 Ft",
+        price: "112.500 Ft",
     },
     {
         title: "15 alkalom",
-        price: "120.000 Ft",
+        price: "200.000 Ft",
     }
 ]
 
