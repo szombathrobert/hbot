@@ -10,8 +10,33 @@ const inter = Inter({ subsets: ["latin"], display: 'swap', variable: "--font-int
 
 export const metadata: Metadata = {
   title: 'Hiperbár Oxigénterápia Székesfehérvár | Endolife Longevity Központ',
-  description: 'Prémium hiperbár oxigénterápia (HBOT) Székesfehérváron. Orvosi felügyelet, poszt-COVID és regenerációs kezelések. Foglaljon időpontot!',
-  keywords: ['hiperbár oxigénterápia', 'HBOT Székesfehérvár', 'oxigénterápia', 'long covid kezelés', 'sport regeneráció'],
+  description: 'Prémium hiperbár oxigénterápia (HBOT) Székesfehérváron. Orvosi felügyelet, poszt-COVID, agyi regeneráció és sejtszintű anti-aging kezelések. Foglaljon időpontot!',
+  keywords: [
+    'hiperbár oxigénterápia',
+    'HBOT Székesfehérvár',
+    'oxigénterápia',
+    'long covid kezelés',
+    'sport regeneráció',
+    'longevity klinika',
+    'agyi regeneráció',
+    'anti-aging'
+  ],
+  openGraph: {
+    title: 'Endolife Longevity Központ | Hiperbár Oxigénterápia',
+    description: 'Komplex sejtszintű regeneráció, poszt-COVID kezelés és anti-aging programok Székesfehérváron.',
+    url: 'https://oxigenkamra.hu',
+    siteName: 'Endolife Longevity',
+    images: [
+      {
+        url: 'https://oxigenkamra.hu/hero.webp', // Ide érdemes a legjobb képed linkjét tenni
+        width: 1200,
+        height: 630,
+        alt: 'Endolife Longevity Oxigénterápia Központ Székesfehérvár',
+      },
+    ],
+    locale: 'hu_HU',
+    type: 'website',
+  },
 }
 
 export default function RootLayout({

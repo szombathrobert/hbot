@@ -4,11 +4,11 @@ export const JsonLd = () => {
         "@graph": [
             {
                 "@type": "MedicalClinic",
-                "@id": "https://oxigenterapia.hu/#clinic",
+                "@id": "https://oxigenkamra.hu/#clinic",
                 "name": "Endolife Longevity Magánorvosi Centrum",
-                "url": "https://oxigenterapia.hu/",
-                "logo": "https://oxigenterapia.hu/logo.png",
-                "image": "https://oxigenterapia.hu/hero.webp",
+                "url": "https://oxigenkamra.hu/",
+                "logo": "https://oxigenkamra.hu/logo.png",
+                "image": "https://oxigenkamra.hu/hero.webp",
                 "description": "Székesfehérvár vezető longevity központja. Hiperbárikus oxigénterápia (HBOT), agyi regeneráció, poszt-COVID rehabilitáció és sejtszintű anti-aging kezelések orvosi felügyelettel.",
                 "address": {
                     "@type": "PostalAddress",
@@ -34,16 +34,16 @@ export const JsonLd = () => {
             },
             {
                 "@type": "TherapeuticProcedure",
-                "@id": "https://oxigenterapia.hu/#procedure",
+                "@id": "https://oxigenkamra.hu/#procedure",
                 "name": "Hiperbárikus Oxigénterápia és Neuro-regeneráció",
-                "provider": { "@id": "https://oxigenterapia.hu/#clinic" },
+                "provider": { "@id": "https://oxigenkamra.hu/#clinic" },
                 "description": "Sejtszintű regenerációs eljárás 1.3-1.5 ATA nyomáson. Elősegíti az angiogenezist, növeli a telomerhosszt és csökkenti a neuroinflammációt.",
                 "indication": ["Post-COVID brain fog", "Chronic fatigue", "Cognitive decline", "Anti-aging"],
                 "howItWorks": "A hyperoxic-hypoxic paradoxon révén aktiválja a szervezet öngyógyító folyamatait és az őssejt-mobilizációt."
             },
             {
                 "@type": "FAQPage",
-                "@id": "https://oxigenterapia.hu/#faq",
+                "@id": "https://oxigenkamra.hu/#faq",
                 "mainEntity": [
                     {
                         "@type": "Question",

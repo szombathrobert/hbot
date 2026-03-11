@@ -5,6 +5,10 @@ const nextConfig: NextConfig = {
     optimizeCss: true,
   },
   output: 'export',
+  trailingSlash: true,
+  images: {
+    unoptimized: true, // a statikus export miatt kell a képekhez, hogy meg legyenek jelenítve
+  },
 };
 
 export default nextConfig;
