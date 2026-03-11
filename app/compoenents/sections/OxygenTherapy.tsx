@@ -73,7 +73,7 @@ export const OxygenTherapy = ({ city = 'Székesfehérvár' }: { city?: string })
                                 className="block lg:hidden relative w-full h-70 sm:h-87.5 rounded-2xl overflow-hidden mb-8 shadow-2xl"
                             >
                                 <Image
-                                    src="/oxygentherapy.webp"
+                                    src="/oxygentheraphy.webp"
                                     alt="Hiperbárikus oxigénterápiás kabin a mentális frissességért"
                                     fill
                                     sizes="(max-width: 1024px) 100vw, 0vw"
@@ -107,7 +107,7 @@ export const OxygenTherapy = ({ city = 'Székesfehérvár' }: { city?: string })
                         className="hidden lg:block w-full lg:w-[25%] relative min-h-full"
                     >
                         <Image
-                            src="/oxygentherapy.webp"
+                            src="/oxygentheraphy.webp"
                             alt="Hiperbárikus oxigénterápiás kabin a mentális frissességért"
                             fill
                             sizes="(max-width: 1024px) 0vw, 25vw"
