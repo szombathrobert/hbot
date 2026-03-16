@@ -1,16 +1,22 @@
+# 1. Alapértelmezett betöltés
 DirectoryIndex index.html
+
+# 2. A Next.js generált 404-es oldalának KIKÉNYSZERÍTÉSE
+ErrorDocument 404 /404.html
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
   
+  # 3. HTTPS kényszerítése
   RewriteCond %{HTTPS} off
   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule . /index.html [L]
+  # (A mindent az index.html-re irányító szabályt innen töröltük, 
+  # így a szerver most már tényleg 404-es hibát fog dobni rossz linknél!)
 </IfModule>
+
+# --- INNENTŐL A SEBESSÉG OPTIMALIZÁLÁS MARAD A RÉGI ---
 
 <IfModule mod_expires.c>
     ExpiresActive On

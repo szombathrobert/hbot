@@ -1,6 +1,8 @@
 import dynamic from 'next/dynamic'
 import { Hero } from "./compoenents/sections/Hero"
 import Image from 'next/image'
+import { References } from './compoenents/sections/References'
+import { MedicalExpert } from './compoenents/sections/MedicalExpert'
 
 const OxygenTherapy = dynamic(() => import("./compoenents/sections/OxygenTherapy").then(m => m.OxygenTherapy))
 const FunctionalPage = dynamic(() => import("./compoenents/sections/FunctionalPage").then(m => m.FunctionalPage))
@@ -66,10 +68,16 @@ export default function Page() {
         <FAQ />
 
         <SectionDivider />
+        <MedicalExpert />
+
+        <SectionDivider />
         <Trust />
 
         <SectionDivider />
         <Contact />
+
+        <SectionDivider />
+        <References />
       </div>
     </main>
   )

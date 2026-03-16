@@ -5,6 +5,7 @@ import { Navbar } from "./compoenents/layout/Navbar";
 import { Footer } from "./compoenents/layout/Footer";
 import { JsonLd } from "./compoenents/JsonLd";
 import { SmoothScroll } from "./compoenents/SmoothScroll";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"], display: 'swap', variable: "--font-inter" });
 
@@ -21,6 +22,9 @@ export const metadata: Metadata = {
     'agyi regeneráció',
     'anti-aging'
   ],
+  alternates: {
+    canonical: 'https://oxigenkamra.hu/',
+  },
   openGraph: {
     title: 'Endolife Longevity Központ | Hiperbár Oxigénterápia',
     description: 'Komplex sejtszintű regeneráció, poszt-COVID kezelés és anti-aging programok Székesfehérváron.',
@@ -28,7 +32,7 @@ export const metadata: Metadata = {
     siteName: 'Endolife Longevity',
     images: [
       {
-        url: 'https://oxigenkamra.hu/hero.webp', // Ide érdemes a legjobb képed linkjét tenni
+        url: 'https://oxigenkamra.hu/hero.webp',
         width: 1200,
         height: 630,
         alt: 'Endolife Longevity Oxigénterápia Központ Székesfehérvár',
@@ -56,6 +60,7 @@ export default function RootLayout({
           {children}
         </SmoothScroll>
         <Footer />
+        <GoogleAnalytics gaId="G-NQF86F2YCR" />
       </body>
     </html>
   );

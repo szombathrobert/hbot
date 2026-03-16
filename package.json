@@ -10,6 +10,7 @@
     "export": "next export"
   },
   "dependencies": {
+    "@next/third-parties": "^16.1.6",
     "@studio-freight/lenis": "^1.0.42",
     "critters": "^0.0.23",
     "framer-motion": "^12.29.2",

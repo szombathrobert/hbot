@@ -6,6 +6,10 @@ import { Quote, MessageCircleQuestion, Plus, Minus } from 'lucide-react'
 
 const faqItems = [
     {
+        question: "Mire jó a hiperbárikus oxigénterápia (HBOT)?",
+        answer: "A hiperbárikus oxigénterápia (HBOT) egy olyan orvosi eljárás, amely során a páciens 100%-os tisztaságú oxigént lélegzik be megnövelt légköri nyomáson. Ez akár 8-szorosára növeli a vérplazmában oldott oxigén szintjét, ami beindítja az új erek képződését (angiogenezis), serkenti az őssejt-termelést, és csökkenti a gyulladásokat. Klinikánkon poszt-COVID agyköd, sport-regeneráció és anti-aging (longevity) folyamatok támogatására alkalmazzuk."
+    },
+    {
         question: "Hogyan támogatja a HBOT az agyi regenerációt?",
         answer: "A hiperbárikus oxigénterápia (HBOT) során a plazmában oldott oxigén szintje 10-20-szorosára nő. Ez beindítja az angiogenezist (új erek képződését) és fokozza a neuroplaszticitást. A folyamat kulcsa a hyperoxic-hypoxic paradoxon, amely aktiválja a regeneratív jelátviteli útvonalakat, például a HIF-1α-t, segítve az agyi mikrokeringés helyreállítását."
     },
