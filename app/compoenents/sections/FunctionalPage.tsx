@@ -65,8 +65,7 @@ export const FunctionalPage = () => {
                                 </p>
 
                                 <p className="text-gray-200 text-justify text-lg md:text-xl font-light leading-relaxed">
-                                    A modern kutatások legfontosabb felismerése a <strong>hyperoxic-hypoxic paradoxon</strong>. A sejtek nem csupán az abszolút oxigénszintre, hanem annak változására reagálnak. A terápia után a normál oxigénszintre való visszatérést a szervezet relatív hipoxiaként (oxigénhiányként) érzékeli.
-
+                                    A modern kutatások legfontosabb felismerése a <strong>hyperoxic-hypoxic paradoxon</strong>. A sejtek nem csupán az abszolút oxigénszintre, hanem annak változására reagálnak. A terápia után a normál oxigénszintre való visszatérést a szervezet relatív hipoxiaként (oxigénhiányként) érzékeli, ennek határása szejtszinten aktiválódik a HIF-1α jelátviteli útvonal, mely klinikai vizsgálatokban már 10-20 kezelés után bizonyítottan aktiválódik/növekszik, mely másodlagosan saját őssejt mobilizáló és neoangio genezist (ér újraképződést segítő) serkentő hatása (vegf)
                                 </p>
 
                                 <p className="text-gray-200 text-justify text-lg md:text-xl font-light leading-relaxed">

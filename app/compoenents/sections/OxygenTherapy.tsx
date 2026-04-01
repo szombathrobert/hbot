@@ -53,7 +53,8 @@ export const OxygenTherapy = ({ city = 'Székesfehérvár' }: { city?: string })
                                 className="space-y-3 mb-8"
                             >
                                 {[
-                                    'A plazmában oldott oxigénszint akár 10-20-szorosára nő',
+                                    'A plazmában oldott oxigénszint akár 10-15-szörösére nő',
+                                    'A szöveti Po2 (Oxigén parcialis nyomás) diffúziós gárdiens amely a sejtek oxigén ellátottságát jelenti, alap esetben 500-1500% közé esik. Ez 1.5 ATM-nél 10x-es (900-1000%-kal nő), míg 2.0 ATM-nél 15-25x-ös (1400-2400%-kal nő)',
                                     'Támogatja az agyi mikrokeringést és a kapillárisok újraképződését',
                                     'Célzott regeneráció poszt-COVID szindróma és krónikus stressz esetén',
                                     'Prémium környezet, kényelmes egyhelyiséges kabinban'

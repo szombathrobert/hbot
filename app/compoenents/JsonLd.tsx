@@ -9,7 +9,7 @@ export const JsonLd = () => {
                 "url": "https://oxigenkamra.hu/",
                 "logo": "https://oxigenkamra.hu/logo.webp",
                 "image": "https://oxigenkamra.hu/hero.webp",
-                "description": "Székesfehérvár vezető longevity központja. Hiperbárikus oxigénterápia (HBOT), agyi regeneráció, poszt-COVID rehabilitáció és sejtszintű anti-aging kezelések orvosi felügyelettel.",
+                "description": "Székesfehérvár vezető longevity központja. Hiperbárikus oxigénterápia (HBOT), agyi regeneráció, poszt-COVID krónikus kimerültség (brain fog) és sejtszintű anti-aging kezelések orvosi felügyelettel.",
                 "address": {
                     "@type": "PostalAddress",
                     "streetAddress": "Budai út 318.",
@@ -24,7 +24,10 @@ export const JsonLd = () => {
                 },
                 "telephone": "+3622999640",
                 "email": "recepcio@endo-kapszula.hu",
-                "priceRange": "45000 Ft - 120000 Ft",
+
+
+                "priceRange": "25000 Ft - 375000 Ft",
+
                 "medicalSpecialty": [
                     "Hyperbaric Medicine",
                     "Regenerative Medicine",
@@ -46,7 +49,10 @@ export const JsonLd = () => {
                 "name": "Hiperbárikus Oxigénterápia és Neuro-regeneráció",
                 "provider": { "@id": "https://oxigenkamra.hu/#clinic" },
                 "description": "Sejtszintű regenerációs eljárás 1.3-1.5 ATA nyomáson. Elősegíti az angiogenezist, növeli a telomerhosszt és csökkenti a neuroinflammációt.",
-                "indication": ["Post-COVID brain fog", "Chronic fatigue", "Cognitive decline", "Anti-aging"],
+                "indication": [
+                    { "@id": "https://oxigenkamra.hu/#postcovid" },
+                    { "@id": "https://oxigenkamra.hu/#brainfog" }
+                ],
                 "howItWorks": "A hyperoxic-hypoxic paradoxon révén aktiválja a szervezet öngyógyító folyamatait és az őssejt-mobilizációt.",
                 "citation": [
                     "https://pubmed.ncbi.nlm.nih.gov/33206062/",
@@ -54,6 +60,24 @@ export const JsonLd = () => {
                     "https://pubmed.ncbi.nlm.nih.gov/21262744/"
                 ]
             },
+
+            {
+                "@type": "MedicalCondition",
+                "@id": "https://oxigenkamra.hu/#postcovid",
+                "name": "Poszt-COVID Szindróma",
+                "alternateName": "Long COVID és Krónikus Kimerültség",
+                "description": "Vírusfertőzések után visszamaradó krónikus fáradtság, gyulladás és mitokondriális diszfunkció, amelyet alvással nem lehet kipihenni.",
+                "possibleTreatment": { "@id": "https://oxigenkamra.hu/#procedure" }
+            },
+            {
+                "@type": "MedicalCondition",
+                "@id": "https://oxigenkamra.hu/#brainfog",
+                "name": "Agyköd (Brain Fog)",
+                "alternateName": "Kognitív Diszfunkció",
+                "description": "Koncentrációs zavarok, lassult gondolkodás és memóriaproblémák, amelyeket az agyi hajszálerek csökkent vérellátása és neuroinflammáció okoz.",
+                "possibleTreatment": { "@id": "https://oxigenkamra.hu/#procedure" }
+            },
+
             {
                 "@type": "FAQPage",
                 "@id": "https://oxigenkamra.hu/#faq",

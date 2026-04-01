@@ -5,16 +5,16 @@ import { Quote } from 'lucide-react'
 
 const occasions = [
     {
-        title: "5 alkalom",
+        title: "1 alkalom",
         price: "25.000 Ft",
     },
     {
         title: "10 alkalom",
-        price: "112.500 Ft",
+        price: "200.000 Ft",
     },
     {
-        title: "15 alkalom",
-        price: "200.000 Ft",
+        title: "20 alkalom",
+        price: "375.000 Ft",
     }
 ]
 
@@ -56,6 +56,10 @@ export const PricePage = () => {
 
                         <span className="block w-full md:w-auto text-center md:text-left text-sm md:text-base font-medium text-[#8FBCE6] uppercase tracking-widest mt-8 md:transform md:translate-x-12">
                             Ezért az Endolife Longevity Egészségklinika bérleteket hozott létre
+                        </span>
+
+                        <span className="block w-full md:w-auto text-center md:text-left text-sm md:text-base font-medium text-[#8FBCE6] uppercase tracking-widest mt-8 md:transform md:translate-x-12">
+                            Áraink a 60 perces kezelésre értendőek
                         </span>
                     </m.div>
 

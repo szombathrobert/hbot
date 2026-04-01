@@ -3,6 +3,7 @@ import { Hero } from "./compoenents/sections/Hero"
 import Image from 'next/image'
 import { References } from './compoenents/sections/References'
 import { MedicalExpert } from './compoenents/sections/MedicalExpert'
+import { SymptomsExplained } from './compoenents/sections/SymptomsExplained'
 
 const OxygenTherapy = dynamic(() => import("./compoenents/sections/OxygenTherapy").then(m => m.OxygenTherapy))
 const FunctionalPage = dynamic(() => import("./compoenents/sections/FunctionalPage").then(m => m.FunctionalPage))
@@ -39,6 +40,9 @@ export default function Page() {
 
       <div className="relative z-10 flex flex-col">
         <Hero />
+
+        <SectionDivider />
+        <SymptomsExplained />
 
         <SectionDivider />
         <OxygenTherapy />

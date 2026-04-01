@@ -32,7 +32,7 @@ export const Hero = ({ city = 'Székesfehérvár' }: { city?: string }) => {
           </h1>
 
           <p className="text-base lg:text-xl mb-8 leading-relaxed font-medium text-white/95 max-w-3xl drop-shadow-md">
-            Érzi a poszt‑COVID „brain fog” hatását? A krónikus stressz és az életkor csökkentheti az agy teljesítményét. Modern regenerációs terápiáink – az <strong>oxigénterápia</strong> és a <strong>fotobiomoduláció (NIR-PBM)</strong> – az agyi mikrokeringés és a sejtszintű energia támogatásával segítik a mentális frissesség helyreállítását.
+            Érzi a poszt‑COVID „brain fog” hatását? A krónikus stressz és az előre adott életkor is csökkentheti az agy teljesítményét. Modern regenerációs terápiáink – az <strong>hiperbárikus oxigénterápia</strong> és a <strong>fotobiomoduláció (NIR-PBM)</strong> – az agyi mikrokeringés és a sejtszintű energia támogatásával segítik a mentális frissesség helyreállítását.
           </p>
 
           <Link

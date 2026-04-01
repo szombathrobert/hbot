@@ -21,7 +21,7 @@ const benefits = [
     icon: HeartPulse,
     title: "Longevity & Sejtszintű Fiatalodás",
     desc: "Az öregedési folyamatok lassítása a sejtosztódás és a DNS szintjén.",
-    details: ["Telomer rövidülés lassítása", "Szeneszcens (öregedő) sejtek csökkentése", "Mitokondriális funkciók támogatása"]
+    details: ["Telomer rövidülés lassítása", "Szeneszcens (öregedő) sejtek csökkentése", "Mitokondriális funkciók támogatása, mitogáfia"]
   },
   {
     icon: Activity,

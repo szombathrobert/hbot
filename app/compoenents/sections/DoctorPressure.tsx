@@ -103,7 +103,7 @@ export const DoctorPressure = () => {
                                     A hiperbárikus oxigénterápia (HBOT) hatékonyságának kulcsa a <strong>fizikai Henry-törvény</strong> gyakorlati alkalmazása. A célzottan megnövelt légköri nyomás alatt az oxigén nem csupán a vörösvértestekhez kötődik, hanem közvetlenül a vérplazmában is feloldódik, mennyisége akár a 10-20-szorosára nő.
 
                                     <br /><br />
-                                    Ez a folyamat drasztikusan megnöveli az <strong>oxigén diffúziós távolságát</strong> a szövetekben. Az extra energia így eljut a rosszul perfundált, mikrokárosodott vagy agyi mikroiszkémiás területekre is. Klinikánkon a nyomásszintet mindig a páciens egyéni poszt-COVID vagy longevity protokolljához igazítjuk orvosi kontroll mellett.
+                                    Ez a folyamat drasztikusan megnöveli az <strong>oxigén diffúziós távolságát</strong> a szövetekben. Az extra energia így eljut a rosszul perfundált, mikrokárosodott vagy agyi mikroiszkémiás területekre is. Klinikánkon a nyomásszintet mindig a páciens egyéni poszt-COVID vagy longevity protokolljához igazítjuk a nyomásszintet és a kezelések gyakoriságát, illetve időtartamát orvosi kontroll mellett.
                                 </p>
                             </div>
                         </m.div>

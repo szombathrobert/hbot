@@ -10,6 +10,10 @@ const treatmentTime = [
     {
         title: "90 perces kezelés",
         desc: "Longevity protokoll – Maximális őssejt mobilizáció és sejtszintű megújulás"
+    },
+    {
+        title: "120 perces kezelés",
+        desc: "Longevity protokoll – Maximális őssejt mobilizáció és sejtszintű megújulás"
     }
 ]
 

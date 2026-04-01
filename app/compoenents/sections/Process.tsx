@@ -11,7 +11,7 @@ const steps = [
         imageSrc: "/consultation.webp"
     },
     {
-        title: "Túlnyomásos fázis (1.3 - 2.5 ATA)",
+        title: "Túlnyomásos fázis (1.1 - 1.5 ATA)",
         desc: "Páciensünk kényelmesen elhelyezkedik a prémium hiperbárikus kabinban. A nyomást fokozatosan a terápiás szintre emeljük, amely a fizikai törvényszerűségek alapján lehetővé teszi a vérplazma oxigénnel való telítését.",
         imageSrc: "/placement.webp"
     },
@@ -104,7 +104,7 @@ export const Process = () => {
                                     </div>
                                 </div>
 
-                                <div className="hidden md:block absolute -bottom-12 -right-8 w-72 h-48 lg:w-80 lg:h-44 z-20 rounded-4xl overflow-hidden shadow-2xl group-hover:scale-105 transition-transform duration-500">
+                                <div className="hidden md:block absolute -bottom-12 -right-12 w-72 h-48 lg:w-80 lg:h-44 z-20 rounded-4xl overflow-hidden shadow-2xl group-hover:scale-105 transition-transform duration-500">
                                     <Image
                                         src={step.imageSrc}
                                         alt={`${step.title} a hiperbárikus oxigénterápia során`}

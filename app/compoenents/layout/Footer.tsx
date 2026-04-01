@@ -54,7 +54,7 @@ export const Footer = () => {
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <h3 className="text-white font-bold uppercase tracking-widest text-sm mb-8">Navigáció</h3>
             <ul className="space-y-4">
-              {['Mire jó?', 'Folyamat', 'Bérletek', 'Vélemények', 'Kapcsolat'].map((item) => (
+              {['Hogyan segít?', 'Longevity Program', 'Kezelés menete', 'Bérletek', 'Kapcsolat'].map((item) => (
                 <li key={item}>
                   <Link
                     href={`#${item.toLowerCase().replace(/ /g, '')}`}
@@ -107,10 +107,17 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-center">
-          <p className="text-gray-400 text-xs">
-            © {currentYear} Oxigénterápia Székesfehérvár. Minden jog fenntartva.
-          </p>
+        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+            <p className="text-gray-400 text-xs">
+              © {currentYear} Oxigénterápia Székesfehérvár.
+            </p>
+            <span className="hidden md:block text-white/10">|</span>
+            <p className="text-gray-500 text-[10px] uppercase tracking-wider">
+              Készítette: <Link className='text-gray-400 hover:text-white transition-colors duration-300' href='https://szombath-robert-portfolio.vercel.app/'>Sz_R</Link>
+            </p>
+          </div>
+
           <div className="flex gap-6">
             <Link href="/adatvedelem" className="text-gray-400 hover:text-gray-200 text-xs transition-colors">Adatkezelési tájékoztató</Link>
             <Link href="/aszf" className="text-gray-400 hover:text-gray-200 text-xs transition-colors">ÁSZF</Link>

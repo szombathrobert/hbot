@@ -39,7 +39,7 @@ export const Benefits = () => {
                             </p>
 
                             <p className="text-gray-200 font-light text-justify text-lg md:text-xl leading-relaxed">
-                                A jövő longevity medicinája nem egyetlen módszerre épül. Orvosi protokolljainkban a hiperbárikus oxigénterápiát (HBOT) <strong>pulzált elektromágneses mező (PEMF)</strong> és <strong>közeli infravörös fotobiomodulációs (NIR-PBM)</strong> terápiákkal ötvözzük.
+                                A jövő longevity medicinája nem egyetlen módszerre épül. Orvosi protokolljainkban a hiperbárikus oxigénterápiát (HBOT) <strong>pulzált elektromágneses mező (PEMF)</strong> és <strong>közeli infravörös fotobiomodulációs (NIR-PBM)</strong> és kiegészítő gyógyszeres longevity és primer prevenciós terápiákkal ötvözzük.
                                 <br /><br />
                                 [Image of synergistic effects of HBOT, PEMF, and NIR-PBM on cellular energy and microcirculation]
                                 <br /><br />
