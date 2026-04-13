@@ -3,18 +3,38 @@
 import { LazyMotion, domAnimation, m, type Variants } from 'framer-motion'
 import { Quote } from 'lucide-react'
 
-const occasions = [
+const pricingPackages = [
     {
         title: "1 alkalom",
-        price: "25.000 Ft",
+        prices: [
+            { duration: "60 perc", price: "25.000 Ft" },
+            { duration: "90 perc", price: "30.000 Ft" },
+            { duration: "120 perc", price: "35.000 Ft" }
+        ]
+    },
+    {
+        title: "5 alkalom",
+        prices: [
+            { duration: "60 perc", price: "119.000 Ft" },
+            { duration: "90 perc", price: "125.000 Ft" },
+            { duration: "120 perc", price: "149.000 Ft" }
+        ]
     },
     {
         title: "10 alkalom",
-        price: "200.000 Ft",
+        prices: [
+            { duration: "60 perc", price: "199.000 Ft" },
+            { duration: "90 perc", price: "249.000 Ft" },
+            { duration: "120 perc", price: "299.000 Ft" }
+        ]
     },
     {
-        title: "20 alkalom",
-        price: "375.000 Ft",
+        title: "25 alkalom",
+        prices: [
+            { duration: "60 perc", price: "499.000 Ft" },
+            { duration: "90 perc", price: "599.000 Ft" },
+            { duration: "120 perc", price: "699.000 Ft" }
+        ]
     }
 ]
 
@@ -57,10 +77,6 @@ export const PricePage = () => {
                         <span className="block w-full md:w-auto text-center md:text-left text-sm md:text-base font-medium text-[#8FBCE6] uppercase tracking-widest mt-8 md:transform md:translate-x-12">
                             Ezért az Endolife Longevity Egészségklinika bérleteket hozott létre
                         </span>
-
-                        <span className="block w-full md:w-auto text-center md:text-left text-sm md:text-base font-medium text-[#8FBCE6] uppercase tracking-widest mt-8 md:transform md:translate-x-12">
-                            Áraink a 60 perces kezelésre értendőek
-                        </span>
                     </m.div>
 
                     <m.div
@@ -68,49 +84,44 @@ export const PricePage = () => {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, margin: "-100px" }}
-                        className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12 items-start"
+                        className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch"
                     >
-                        {occasions.map((occasion, index) => (
-                            <m.div key={index} variants={itemVariants} className="relative group h-full pt-4 pr-4">
+                        {pricingPackages.map((pkg, index) => (
+                            <m.div key={index} variants={itemVariants} className="relative group h-full">
 
                                 <div className={`
                                     relative h-full
                                     bg-linear-to-br from-[#0f172a]/60 to-[#0f172a]/20 backdrop-blur-xl
-                                    rounded-[2.5rem] px-8 py-10 lg:px-10 lg:py-12
+                                    rounded-[2.5rem] px-6 py-8
                                     flex flex-col shadow-2xl z-10 
-                                    min-h-50
                                     border-l-[6px] border-l-white/90 
                                     border-t-[6px] border-t-white/80 
                                     border-b-[6px] border-b-cyan-200/70 
                                     border-r border-r-cyan-200/60
-                                    hover:border-cyan-200/50 transition-colors duration-500
+                                    hover:border-cyan-200/50 hover:bg-[#0f172a]/40 transition-all duration-500
                                 `}>
-                                    <div className="mb-8 border-b border-white/10 pb-6">
-                                        <h3 className="text-3xl font-bold text-white mb-2 leading-tight">
-                                            {occasion.title}
+                                    <div className="mb-6 border-b border-white/10 pb-4 text-center">
+                                        <h3 className="text-3xl font-bold text-white mb-1 leading-tight">
+                                            {pkg.title}
                                         </h3>
                                     </div>
 
-                                    <div className="md:hidden mt-auto self-end">
-                                        <div className="bg-[#8FBCE6] border border-cyan-400/30 rounded-full px-6 py-3 shadow-[0_0_15px_rgba(34,211,238,0.2)]">
-                                            <span className="text-xl font-bold text-white">{occasion.price}</span>
-                                        </div>
+                                    <div className="flex flex-col gap-3 grow justify-center">
+                                        {pkg.prices.map((priceItem, priceIndex) => (
+                                            <div
+                                                key={priceIndex}
+                                                className="flex items-center justify-between bg-white/5 rounded-2xl px-4 py-3 hover:bg-white/10 transition-colors border border-white/5"
+                                            >
+                                                <span className="text-sm font-medium text-[#8FBCE6] uppercase tracking-wider">
+                                                    {priceItem.duration}
+                                                </span>
+                                                <span className="text-lg font-bold text-white">
+                                                    {priceItem.price}
+                                                </span>
+                                            </div>
+                                        ))}
                                     </div>
                                 </div>
-
-                                <div className="hidden md:flex absolute -bottom-6 -right-6 z-20 
-                                            bg-[#8FBCE6] border-2 border-cyan-400 
-                                            rounded-full px-8 py-4 
-                                            shadow-[0_0_25px_rgba(34,211,238,0.3)] 
-                                            items-center justify-center
-                                            group-hover:scale-110 group-hover:shadow-[0_0_35px_rgba(34,211,238,0.5)] 
-                                            transition-all duration-300">
-
-                                    <span className="text-2xl font-bold text-white tracking-wide">
-                                        {occasion.price}
-                                    </span>
-                                </div>
-
                             </m.div>
                         ))}
                     </m.div>

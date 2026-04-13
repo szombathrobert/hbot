@@ -2,32 +2,36 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence, type Variants } from 'framer-motion'
-import { Quote, MessageCircleQuestion, Plus, Minus } from 'lucide-react'
+import { Quote, MessageCircleQuestion, Plus, Minus, BookOpen } from 'lucide-react'
 
-const faqItems = [
+type FaqItem = {
+    question: string;
+    answer: React.ReactNode;
+}
+
+const faqItems: FaqItem[] = [
     {
-        question: "Mire jó a hiperbárikus oxigénterápia (HBOT)?",
-        answer: "A hiperbárikus oxigénterápia (HBOT) egy olyan orvosi eljárás, amely során a páciens 100%-os tisztaságú oxigént lélegzik be megnövelt légköri nyomáson. Ez akár 8-szorosára növeli a vérplazmában oldott oxigén szintjét, ami beindítja az új erek képződését (angiogenezis), serkenti az őssejt-termelést, és csökkenti a gyulladásokat. Klinikánkon poszt-COVID agyköd, sport-regeneráció és anti-aging (longevity) folyamatok támogatására alkalmazzuk."
+        question: "Mi az a hiperbárikus oxigénterápia és milyen problémákon segít?",
+        answer: "A hiperbárikus oxigénterápia során 100%-os tisztaságú oxigént lélegez be megnövelt (1.3 ATA) nyomáson. Ez drasztikusan megnöveli a vérplazmában oldott oxigén szintjét. Kiválóan alkalmazható agyi regenerációra, poszt-COVID 'brain fog' (agyköd) kezelésére, sport-rehabilitációra, valamint a sejtek öregedésének (anti-aging) lassítására."
     },
     {
-        question: "Hogyan támogatja a HBOT az agyi regenerációt?",
-        answer: "A hiperbárikus oxigénterápia (HBOT) során a plazmában oldott oxigén szintje 10-20-szorosára nő. Ez beindítja az angiogenezist (új erek képződését) és fokozza a neuroplaszticitást. A folyamat kulcsa a hyperoxic-hypoxic paradoxon, amely aktiválja a regeneratív jelátviteli útvonalakat, például a HIF-1α-t, segítve az agyi mikrokeringés helyreállítását."
+        question: "Miért egyedi a komplex Longevity program (HBOT + PEMF + NIR)?",
+        answer: "Klinikánkon a terápiát pulzált elektromágneses (PEMF) és közeli infravörös (NIR-PBM) technológiával ötvözzük. Míg az oxigénkamra az 'üzemanyagot' (oxigént) biztosítja, a PEMF megnyitja a hajszálereket, a NIR pedig beindítja a sejtek energiaközpontjait (mitokondriumok), így a regeneráció szinergiában, többszörös hatékonysággal megy végbe."
     },
     {
-        question: "Hány alkalom szükséges a valódi változáshoz?",
-        answer: "A regenerációs hatás kumulatív. A modern longevity protokollok szerint a sejtszintű változásokhoz (mint a telomerhossz növekedése vagy a szeneszcens sejtek csökkenése) heti 3-5 alkalom javasolt egy 6-12 hetes cikluson belül. Poszt-COVID szindróma vagy 'brain fog' esetén az egyéni állapotfelmérés alapján orvosaink személyre szabott kúrát állítanak össze."
+        question: "Hány kezelés szükséges a tartós eredményhez?",
+        answer: "A regenerációs hatás kumulatív, azaz összeadódik. Általános egészségmegőrzésre napi 1-2 alkalom is frissítő, de a sejtszintű változásokhoz (mint a telomerhossz növekedése) heti 3-5 alkalom javasolt egy 6-12 hetes cikluson belül. Orvosaink minden esetben egyéni, személyre szabott protokollt javasolnak."
     },
     {
-        question: "Segíthet a kezelés a poszt-COVID tüneteken?",
-        answer: "Igen, a kutatások szerint a HBOT hatékonyan csökkenti a neuroinflammációt (agyi gyulladást) és javítja az endothel diszfunkciót, amelyek a 'brain fog' fő kiváltói. A kezelés támogatja a mitokondriális működést, így segít visszanyerni a mentális fókuszt és csökkenteni a krónikus fáradtságot."
-    },
-    {
-        question: "Milyen előnyei vannak a komplex programnak (PEMF + NIR)?",
-        answer: "A komplex Longevity programunkban a HBOT-ot pulzált elektromágneses (PEMF) és közeli infravörös (NIR-PBM) terápiával ötvözzük. Míg a HBOT az oxigénkínálatot növeli, a PEMF a kapilláris perfúziót javítja, a NIR pedig közvetlenül a mitokondriális energiatermelést (ATP) fokozza, így a módszerek szinergiában támogatják a regenerációt."
-    },
-    {
-        question: "Vannak ellenjavallatok?",
-        answer: "A biztonság elsődleges. Kezeletlen légmell, bizonyos tüdőbetegségek vagy akut lázas fertőzés esetén a kezelés nem javasolt. Ezért klinikánkon minden kúrát részletes orvosi konzultáció és állapotfelmérés előz meg, ahol szakembereink megállapítják a terápiás alkalmasságot."
+        question: "Hogyan készüljek fel a kezelésre? (Biztonsági szabályok)",
+        answer: (
+            <ul className="list-disc pl-5 space-y-2">
+                <li><strong>Tiltott tárgyak:</strong> Szigorúan tilos tüzet, gyúlékony anyagokat (benzin, alkohol, olajok, öngyújtó), valamint hegyes tárgyakat a kamrába vinni!</li>
+                <li><strong>Étkezés:</strong> Étkezés után 1-2 órával javasolt a használat, ne lépjen be puffasztó ételek fogyasztása után.</li>
+                <li><strong>Fülpattogás:</strong> A nyomás növekedésekor füldugulást érezhet (mint a repülőn). Nyeljen nagyokat, mozgassa az állkapcsát, vagy befogott orral fújjon enyhén levegőt a fülébe.</li>
+                <li><strong>Légzés:</strong> Lélegezzen normálisan, a nyomáscsökkentéskor tilos visszatartani a lélegzetet!</li>
+            </ul>
+        )
     }
 ]
 
@@ -49,7 +53,7 @@ export const FAQ = () => {
     }
 
     return (
-        <section id="gyik" aria-label="Gyakori Kérdések a hiperbárikus oxigénterápiáról és agyi regenerációról" className="relative w-full py-24 overflow-hidden flex items-center justify-center">
+        <section id="gyik" aria-label="Gyakori Kérdések a hiperbárikus oxigénterápiáról és agyi regenerációról" className="relative w-full py-24 overflow-hidden flex flex-col items-center justify-center">
 
             <div className="container mx-auto px-4 md:px-6 relative z-10">
 
@@ -131,8 +135,35 @@ export const FAQ = () => {
                             </motion.div>
                         ))}
                     </motion.div>
-
                 </div>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.3, duration: 0.6 }}
+                    className="max-w-5xl mx-auto mt-24 bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 md:p-10 flex flex-col md:flex-row gap-8 items-center justify-between shadow-2xl"
+                >
+                    <div className="flex items-center gap-6">
+                        <div className="bg-cyan-500/10 p-5 rounded-2xl border border-cyan-500/20">
+                            <BookOpen className="w-10 h-10 text-cyan-400" />
+                        </div>
+                        <div className="text-center md:text-left">
+                            <h4 className="font-bold text-white text-2xl uppercase tracking-wider mb-2">Minden részletre kíváncsi?</h4>
+                            <p className="font-light text-gray-300 text-lg">
+                                Töltse le a hiperbár kamra hivatalos, magyar nyelvű felhasználói kézikönyvét.
+                            </p>
+                        </div>
+                    </div>
+                    <a
+                        href="/docs/hiperbar_oxigenkamra_magyar_kezikonyv.pdf"
+                        download
+                        className="whitespace-nowrap px-8 py-4 rounded-full bg-cyan-500 text-[#020617] font-bold text-lg shadow-[0_0_15px_rgba(34,211,238,0.3)] hover:shadow-[0_0_25px_rgba(34,211,238,0.5)] hover:bg-cyan-400 transition-all duration-300 hover:scale-105"
+                    >
+                        Kézikönyv letöltése
+                    </a>
+                </motion.div>
+
             </div>
         </section>
     )

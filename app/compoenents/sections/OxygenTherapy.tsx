@@ -89,7 +89,7 @@ export const OxygenTherapy = ({ city = 'Székesfehérvár' }: { city?: string })
                                 transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
                                 className="flex flex-col sm:flex-row gap-4"
                             >
-                                <Link aria-label='medicall' href="https://www.medicall.cc" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 px-8 py-3.5 rounded-full text-lg font-bold shadow-[0_0_15px_rgba(34,211,238,0.3)] bg-cyan-500 text-[#020617] hover:bg-cyan-400 hover:shadow-[0_0_25px_rgba(34,211,238,0.5)] transition-all duration-300 ease-in-out hover:scale-105">
+                                <Link aria-label='medicall' href="https://endo-kapszula.mymedio.hu/doctors?specializationId=10118235" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 px-8 py-3.5 rounded-full text-lg font-bold shadow-[0_0_15px_rgba(34,211,238,0.3)] bg-cyan-500 text-[#020617] hover:bg-cyan-400 hover:shadow-[0_0_25px_rgba(34,211,238,0.5)] transition-all duration-300 ease-in-out hover:scale-105">
                                     <CalendarCheck className="w-5 h-5" />
                                     Időpontfoglalás
                                 </Link>

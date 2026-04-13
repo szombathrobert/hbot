@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { References } from './compoenents/sections/References'
 import { MedicalExpert } from './compoenents/sections/MedicalExpert'
 import { SymptomsExplained } from './compoenents/sections/SymptomsExplained'
+import Preferences from './compoenents/sections/Preferences'
 
 const OxygenTherapy = dynamic(() => import("./compoenents/sections/OxygenTherapy").then(m => m.OxygenTherapy))
 const FunctionalPage = dynamic(() => import("./compoenents/sections/FunctionalPage").then(m => m.FunctionalPage))
@@ -67,6 +68,9 @@ export default function Page() {
 
         <SectionDivider />
         <PricePage />
+
+        <SectionDivider />
+        <Preferences />
 
         <SectionDivider />
         <FAQ />

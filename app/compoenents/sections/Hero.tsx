@@ -37,7 +37,7 @@ export const Hero = ({ city = 'Székesfehérvár' }: { city?: string }) => {
 
           <Link
             aria-label='idopontfoglalas'
-            href="https://www.google.com"
+            href="https://endo-kapszula.mymedio.hu/doctors?specializationId=10118235"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex justify-center items-center gap-2 text-white py-3 px-8 w-full md:w-auto rounded-full text-lg md:text-xl font-semibold shadow-lg shadow-brand-primary/20 hover:bg-[#3f73a4] transition-colors duration-300 ease-in-out bg-[#2C5D8A]"
