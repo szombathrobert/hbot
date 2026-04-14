@@ -1,6 +1,6 @@
 'use client'
 
-import { motion, Variants } from 'framer-motion'
+import { LazyMotion, domAnimation, m, Variants } from 'framer-motion'
 import { Brain, BatteryWarning, Hourglass } from 'lucide-react'
 
 const symptoms = [
@@ -45,74 +45,76 @@ const itemVariants: Variants = {
 
 export const SymptomsExplained = () => {
     return (
-        <section className="relative w-full py-24 overflow-hidden flex items-center justify-center">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-cyan-900/10 blur-[120px] rounded-full pointer-events-none" />
+        <LazyMotion features={domAnimation}>
+            <section className="relative w-full py-24 overflow-hidden flex items-center justify-center">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-cyan-900/10 blur-[120px] rounded-full pointer-events-none" />
 
-            <div className="container mx-auto px-4 md:px-6 relative z-10">
-                <div className="text-center max-w-3xl mx-auto mb-16">
-                    <motion.h2
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-sm font-bold text-cyan-400 tracking-widest uppercase mb-4"
-                    >
-                        Ismerős tünetek?
-                    </motion.h2>
-                    <motion.h3
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.1 }}
-                        className="text-3xl md:text-5xl font-light text-white leading-tight mb-6"
-                    >
-                        Láthatatlan terhek, <br />
-                        <span className="font-bold">amiket nem kell elfogadnia</span>
-                    </motion.h3>
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.2 }}
-                        className="text-lg text-slate-400 leading-relaxed"
-                    >
-                        Sok páciensünk érkezik hozzánk megfogalmazhatatlan kimerültséggel és fókuszvesztéssel. Ezek nem "természetes velejárói" a kornak vagy a stressznek, hanem kezelhető, fiziológiai állapotok.
-                    </motion.p>
-                </div>
+                <div className="container mx-auto px-4 md:px-6 relative z-10">
+                    <div className="text-center max-w-3xl mx-auto mb-16">
+                        <m.h2
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="text-sm font-bold text-cyan-400 tracking-widest uppercase mb-4"
+                        >
+                            Ismerős tünetek?
+                        </m.h2>
+                        <m.h3
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.1 }}
+                            className="text-3xl md:text-5xl font-light text-white leading-tight mb-6"
+                        >
+                            Láthatatlan terhek, <br />
+                            <span className="font-bold">amiket nem kell elfogadnia</span>
+                        </m.h3>
+                        <m.p
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.2 }}
+                            className="text-lg text-slate-400 leading-relaxed"
+                        >
+                            Sok páciensünk érkezik hozzánk megfogalmazhatatlan kimerültséggel és fókuszvesztéssel. Ezek nem "természetes velejárói" a kornak vagy a stressznek, hanem kezelhető, fiziológiai állapotok.
+                        </m.p>
+                    </div>
 
-                <motion.div
-                    variants={containerVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    className="grid grid-cols-1 md:grid-cols-3 gap-8"
-                >
-                    {symptoms.map((symptom, index) => {
-                        const Icon = symptom.icon
-                        return (
-                            <motion.div
-                                key={index}
-                                variants={itemVariants}
-                                className={`
+                    <m.div
+                        variants={containerVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        className="grid grid-cols-1 md:grid-cols-3 gap-8"
+                    >
+                        {symptoms.map((symptom, index) => {
+                            const Icon = symptom.icon
+                            return (
+                                <m.div
+                                    key={index}
+                                    variants={itemVariants}
+                                    className={`
                                     relative p-8 rounded-3xl backdrop-blur-sm
                                     bg-slate-900/40 border border-slate-700/50
                                     hover:bg-slate-800/60 hover:${symptom.borderColor}
                                     transition-all duration-300 group
                                 `}
-                            >
-                                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 ${symptom.bgColor}`}>
-                                    <Icon className={`w-7 h-7 ${symptom.color}`} />
-                                </div>
-                                <h4 className="text-xl font-bold text-white mb-4">
-                                    {symptom.title}
-                                </h4>
-                                <p className="text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors">
-                                    {symptom.description}
-                                </p>
-                            </motion.div>
-                        )
-                    })}
-                </motion.div>
-            </div>
-        </section>
+                                >
+                                    <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 ${symptom.bgColor}`}>
+                                        <Icon className={`w-7 h-7 ${symptom.color}`} />
+                                    </div>
+                                    <h4 className="text-xl font-bold text-white mb-4">
+                                        {symptom.title}
+                                    </h4>
+                                    <p className="text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors">
+                                        {symptom.description}
+                                    </p>
+                                </m.div>
+                            )
+                        })}
+                    </m.div>
+                </div>
+            </section>
+        </LazyMotion>
     )
 }

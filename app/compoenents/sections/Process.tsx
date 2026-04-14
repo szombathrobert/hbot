@@ -104,7 +104,7 @@ export const Process = () => {
                                     </div>
                                 </div>
 
-                                <div className="hidden md:block absolute -bottom-12 -right-12 w-72 h-48 lg:w-80 lg:h-44 z-20 rounded-4xl overflow-hidden shadow-2xl group-hover:scale-105 transition-transform duration-500">
+                                <div className="hidden md:block absolute -bottom-16 -right-12 w-72 h-48 lg:w-80 lg:h-44 z-20 rounded-4xl overflow-hidden shadow-2xl group-hover:scale-105 transition-transform duration-500">
                                     <Image
                                         src={step.imageSrc}
                                         alt={`${step.title} a hiperbárikus oxigénterápia során`}

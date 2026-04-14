@@ -24,10 +24,7 @@ export const JsonLd = () => {
                 },
                 "telephone": "+3622999640",
                 "email": "recepcio@endo-kapszula.hu",
-
-
-                "priceRange": "25000 Ft - 375000 Ft",
-
+                "priceRange": "25000 HUF - 699000 HUF",
                 "medicalSpecialty": [
                     "Hyperbaric Medicine",
                     "Regenerative Medicine",
@@ -39,7 +36,14 @@ export const JsonLd = () => {
                         "@type": "Physician",
                         "name": "Dr. Prof. Madácsy László",
                         "jobTitle": "Belgyógyász, Gasztroenterológus és Longevity szakértő",
-                        "url": "https://oxigenkamra.hu/#szakmai-hatter"
+                        "url": "https://oxigenkamra.hu/#szakmai-hatter",
+                        "identifier": [
+                            {
+                                "@type": "PropertyValue",
+                                "name": "Magyar Orvosi Kamara",
+                                "value": "45326"
+                            }
+                        ]
                     }
                 ]
             },
@@ -60,7 +64,6 @@ export const JsonLd = () => {
                     "https://pubmed.ncbi.nlm.nih.gov/21262744/"
                 ]
             },
-
             {
                 "@type": "MedicalCondition",
                 "@id": "https://oxigenkamra.hu/#postcovid",
@@ -77,33 +80,40 @@ export const JsonLd = () => {
                 "description": "Koncentrációs zavarok, lassult gondolkodás és memóriaproblémák, amelyeket az agyi hajszálerek csökkent vérellátása és neuroinflammáció okoz.",
                 "possibleTreatment": { "@id": "https://oxigenkamra.hu/#procedure" }
             },
-
             {
                 "@type": "FAQPage",
                 "@id": "https://oxigenkamra.hu/#faq",
                 "mainEntity": [
                     {
                         "@type": "Question",
-                        "name": "Mire jó a hiperbárikus oxigénterápia (HBOT)?",
+                        "name": "Mi az a hiperbárikus oxigénterápia és milyen problémákon segít?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "A hiperbárikus oxigénterápia (HBOT) egy olyan orvosi eljárás, amely során a páciens 100%-os tisztaságú oxigént lélegzik be megnövelt légköri nyomáson. Ez akár 8-szorosára növeli a vérplazmában oldott oxigén szintjét, ami beindítja az új erek képződését (angiogenezis), serkenti az őssejt-termelést, és csökkenti a gyulladásokat. Klinikánkon poszt-COVID agyköd, sport-regeneráció és anti-aging (longevity) folyamatok támogatására alkalmazzuk."
+                            "text": "A hiperbárikus oxigénterápia során 100%-os tisztaságú oxigént lélegez be megnövelt (1.3 ATA) nyomáson. Ez drasztikusan megnöveli a vérplazmában oldott oxigén szintjét. Kiválóan alkalmazható agyi regenerációra, poszt-COVID 'brain fog' (agyköd) kezelésére, sport-rehabilitációra, valamint a sejtek öregedésének (anti-aging) lassítására."
                         }
                     },
                     {
                         "@type": "Question",
-                        "name": "Hogyan segít a HBOT a brain fog (agyköd) esetén?",
+                        "name": "Miért egyedi a komplex Longevity program (HBOT + PEMF + NIR)?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "A HBOT csökkenti az agyi gyulladást és javítja a mikrokeringést, így közvetlenül támogatja a kognitív funkciók helyreállítását poszt-COVID szindróma esetén."
+                            "text": "Klinikánkon a terápiát pulzált elektromágneses (PEMF) és közeli infravörös (NIR-PBM) technológiával ötvözzük. Míg az oxigénkamra az 'üzemanyagot' (oxigént) biztosítja, a PEMF megnyitja a hajszálereket, a NIR pedig beindítja a sejtek energiaközpontjait (mitokondriumok), így a regeneráció szinergiában, többszörös hatékonysággal megy végbe."
                         }
                     },
                     {
                         "@type": "Question",
-                        "name": "Milyen hatása van a terápiának a hosszú életre (longevity)?",
+                        "name": "Hány kezelés szükséges a tartós eredményhez?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Kutatások igazolják, hogy a protokollszerű HBOT kezelés képes növelni a telomerek hosszát és csökkenteni a szeneszcens, azaz öregedő sejtek számát a szervezetben."
+                            "text": "A regenerációs hatás kumulatív, azaz összeadódik. Általános egészségmegőrzésre napi 1-2 alkalom is frissítő, de a sejtszintű változásokhoz (mint a telomerhossz növekedése) heti 3-5 alkalom javasolt egy 6-12 hetes cikluson belül. Orvosaink minden esetben egyéni, személyre szabott protokollt javasolnak."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Hogyan készüljek fel a kezelésre? (Biztonsági szabályok)",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Tiltott tárgyak: Szigorúan tilos tüzet, gyúlékony anyagokat (benzin, alkohol, olajok, öngyújtó), valamint hegyes tárgyakat a kamrába vinni! Étkezés: Étkezés után 1-2 órával javasolt a használat, ne lépjen be puffasztó ételek fogyasztása után. Fülpattogás: A nyomás növekedésekor füldugulást érezhet (mint a repülőn). Nyeljen nagyokat, mozgassa az állkapcsát, vagy befogott orral fújjon enyhén levegőt a fülébe. Légzés: Lélegezzen normálisan, a nyomáscsökkentéskor tilos visszatartani a lélegzetet!"
                         }
                     }
                 ]

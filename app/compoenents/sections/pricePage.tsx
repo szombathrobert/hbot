@@ -2,6 +2,7 @@
 
 import { LazyMotion, domAnimation, m, type Variants } from 'framer-motion'
 import { Quote } from 'lucide-react'
+import Link from 'next/link' // Fontos: be kell importálni a Link-et
 
 const pricingPackages = [
     {
@@ -125,6 +126,27 @@ export const PricePage = () => {
                             </m.div>
                         ))}
                     </m.div>
+
+                    <m.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-50px" }}
+                        transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
+                        className="mt-20 flex flex-col items-center justify-center text-center"
+                    >
+                        <Link
+                            href="https://endo-kapszula.mymedio.hu/doctors?specializationId=10118235"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex justify-center items-center gap-2 text-white py-4 px-8 md:px-12 rounded-full text-lg md:text-xl font-semibold shadow-lg shadow-brand-primary/20 hover:bg-[#3f73a4] transition-colors duration-300 ease-in-out bg-[#2C5D8A]"
+                        >
+                            Foglaljon időpontot a kötelező előkonzultációra!
+                        </Link>
+                        <p className="mt-5 text-sm md:text-base text-white/70 max-w-2xl">
+                            A kezelések megkezdése előtt egy alapos szakorvosi állapotfelmérés szükséges, hogy a terápiát személyre szabottan és a legnagyobb biztonsággal alkalmazhassuk.
+                        </p>
+                    </m.div>
+
                 </div>
             </section>
         </LazyMotion>
