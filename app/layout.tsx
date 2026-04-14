@@ -25,6 +25,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://oxigenkamra.hu/',
   },
+  verification: {
+    google: 'rEn4GH1vUvfZLhSGkr3U5yU68yquYIuELPF8itOpSSk'
+  },
   openGraph: {
     title: 'Endolife Longevity Központ | Hiperbár Oxigénterápia',
     description: 'Komplex sejtszintű regeneráció, poszt-COVID kezelés és anti-aging programok Székesfehérváron.',

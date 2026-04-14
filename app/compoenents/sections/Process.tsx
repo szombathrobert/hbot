@@ -11,7 +11,7 @@ const steps = [
         imageSrc: "/consultation.webp"
     },
     {
-        title: "Túlnyomásos fázis (1.1 - 1.5 ATA)",
+        title: "Túlnyomásos fázis (1.2 - 1.5 ATA)",
         desc: "Páciensünk kényelmesen elhelyezkedik a prémium hiperbárikus kabinban. A nyomást fokozatosan a terápiás szintre emeljük, amely a fizikai törvényszerűségek alapján lehetővé teszi a vérplazma oxigénnel való telítését.",
         imageSrc: "/placement.webp"
     },
